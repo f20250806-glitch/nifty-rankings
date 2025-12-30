@@ -1,0 +1,33 @@
+name: Update Rankings
+
+on:
+  schedule:
+    # Run at 10:00 UTC (Market should be open or recent close) every day
+    - cron: '0 10 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install Dependencies
+      run: |
+        pip install pandas yfinance
+        
+    - name: Run Data Fetch Script
+      run: python fetch_data.py
+      
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add webapp/public/data.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update rankings [skip ci]" && git push)
