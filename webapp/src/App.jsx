@@ -3,7 +3,12 @@ import StockCard from './components/StockCard';
 import initialData from '../public/data.json';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 
-const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#6366f1', '#14b8a6', '#f97316', '#84cc16'];
+const COLORS = [
+  '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+  '#ec4899', '#6366f1', '#14b8a6', '#f97316', '#84cc16',
+  '#0ea5e9', '#22c55e', '#eab308', '#f43f5e', '#a855f7',
+  '#d946ef', '#818cf8', '#0d9488', '#fb923c', '#65a30d'
+];
 
 function App() {
   const [data, setData] = useState([]);
