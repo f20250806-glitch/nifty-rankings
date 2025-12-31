@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-site-url.vercel.app/sitemap.xml
+Sitemap: https://nifty-rankings.vercel.app/sitemap.xml
