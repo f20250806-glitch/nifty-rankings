@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import StockCard from './components/StockCard';
 import initialData from '../public/data.json';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
+
+const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#6366f1', '#14b8a6', '#f97316', '#84cc16'];
 
 function App() {
   const [data, setData] = useState([]);
@@ -136,11 +139,60 @@ function App() {
             <span>🏆</span> Top by Sector
           </h3>
 
+          {/* Portfolio Chart */}
+          <div style={{ height: '300px', marginBottom: '2rem' }}>
+            <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-secondary)', marginBottom: '0.5rem', textAlign: 'center' }}>
+              Ideal Portfolio Allocation (Aggressive)
+            </div>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={(() => {
+                    // Calculate total for percentage, using cube to exaggerate differences
+                    const totalScore = sectorLeaders.reduce((acc, s) => acc + Math.pow(s.leader.display_score, 3), 0);
+                    return sectorLeaders.map(s => {
+                      const weight = Math.pow(s.leader.display_score, 3);
+                      return {
+                        name: s.leader.company,
+                        value: weight, // Used for slice size
+                        originalScore: s.leader.display_score,
+                        percent: ((weight / totalScore) * 100).toFixed(1)
+                      };
+                    });
+                  })()}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={80}
+                  paddingAngle={5}
+                  dataKey="value"
+                >
+                  {sectorLeaders.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <RechartsTooltip
+                  contentStyle={{
+                    backgroundColor: 'var(--color-surface)',
+                    border: '1px solid var(--color-border)',
+                    borderRadius: '8px',
+                    fontSize: '0.8rem'
+                  }}
+                  itemStyle={{ color: 'var(--color-text-primary)' }}
+                  formatter={(value, name, props) => [
+                    `${props.payload.percent}% (Score: ${props.payload.originalScore})`,
+                    props.payload.name
+                  ]}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+
           <div className="sector-list">
-            {sectorLeaders.map(s => (
+            {sectorLeaders.map((s, index) => (
               <div className="sector-item" key={s.name}>
                 <div className="sector-header">
-                  <span className="sector-name">{s.name}</span>
+                  <span className="sector-name" style={{ color: COLORS[index % COLORS.length] }}>{s.name}</span>
                   {/* <span className="sector-count">{s.count} listed</span> */}
                 </div>
 
@@ -148,7 +200,7 @@ function App() {
                   <div className="leader-name">
                     {s.leader.company}
                   </div>
-                  <div className="leader-score">
+                  <div className="leader-score" style={{ backgroundColor: COLORS[index % COLORS.length], color: '#fff' }}>
                     {s.leader.display_score}
                   </div>
                 </div>
