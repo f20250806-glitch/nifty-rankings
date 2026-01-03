@@ -3,6 +3,7 @@ import yfinance as yf
 import json
 import time
 import os
+import numpy as np
 
 # Constants
 SP500_CSV_PATH = "nifty50.csv"
