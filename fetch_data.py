@@ -218,7 +218,7 @@ def main():
             'roa', 'debt_to_equity', 'current_ratio',
             'pct_rev_growth', 'pct_profit_growth', 
             'pct_roa', 'pct_debt_equity', 'pct_current_ratio'
-        ]].to_dict(orient='records')
+        ]].replace({np.nan: None}).to_dict(orient='records')
         
         # ensure output dir
         os.makedirs(os.path.dirname(OUTPUT_JSON_PATH), exist_ok=True)
