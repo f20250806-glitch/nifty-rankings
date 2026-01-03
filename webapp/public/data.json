@@ -873,12 +873,12 @@
     "revenue_growth": 0.079,
     "profit_growth": 0.02,
     "roa": 0.0219,
-    "debt_to_equity": NaN,
+    "debt_to_equity": null,
     "current_ratio": 0.0,
     "pct_rev_growth": 0.43137254901960786,
     "pct_profit_growth": 0.27450980392156865,
     "pct_roa": 0.1568627450980392,
-    "pct_debt_equity": NaN,
+    "pct_debt_equity": null,
     "pct_current_ratio": 0.06862745098039216
   },
   {
@@ -894,12 +894,12 @@
     "revenue_growth": 0.081,
     "profit_growth": 0.029,
     "roa": 0.011460001,
-    "debt_to_equity": NaN,
+    "debt_to_equity": null,
     "current_ratio": 0.0,
     "pct_rev_growth": 0.45098039215686275,
     "pct_profit_growth": 0.3333333333333333,
     "pct_roa": 0.0784313725490196,
-    "pct_debt_equity": NaN,
+    "pct_debt_equity": null,
     "pct_current_ratio": 0.06862745098039216
   },
   {
@@ -978,12 +978,12 @@
     "revenue_growth": -0.428,
     "profit_growth": -0.066,
     "roa": 0.0035899999,
-    "debt_to_equity": NaN,
+    "debt_to_equity": null,
     "current_ratio": 1.168,
     "pct_rev_growth": 0.0196078431372549,
     "pct_profit_growth": 0.13725490196078433,
     "pct_roa": 0.0392156862745098,
-    "pct_debt_equity": NaN,
+    "pct_debt_equity": null,
     "pct_current_ratio": 0.49019607843137253
   },
   {
@@ -999,12 +999,12 @@
     "revenue_growth": -0.06,
     "profit_growth": -0.255,
     "roa": 0.01592,
-    "debt_to_equity": NaN,
+    "debt_to_equity": null,
     "current_ratio": 0.0,
     "pct_rev_growth": 0.13725490196078433,
     "pct_profit_growth": 0.0784313725490196,
     "pct_roa": 0.09803921568627451,
-    "pct_debt_equity": NaN,
+    "pct_debt_equity": null,
     "pct_current_ratio": 0.06862745098039216
   },
   {
@@ -1020,12 +1020,12 @@
     "revenue_growth": -0.124,
     "profit_growth": -0.114,
     "roa": 0.02162,
-    "debt_to_equity": NaN,
+    "debt_to_equity": null,
     "current_ratio": 0.0,
     "pct_rev_growth": 0.0784313725490196,
     "pct_profit_growth": 0.11764705882352941,
     "pct_roa": 0.13725490196078433,
-    "pct_debt_equity": NaN,
+    "pct_debt_equity": null,
     "pct_current_ratio": 0.06862745098039216
   },
   {
@@ -1041,12 +1041,12 @@
     "revenue_growth": -0.072,
     "profit_growth": 0.091,
     "roa": 0.01653,
-    "debt_to_equity": NaN,
+    "debt_to_equity": null,
     "current_ratio": 0.0,
     "pct_rev_growth": 0.09803921568627451,
     "pct_profit_growth": 0.5098039215686274,
     "pct_roa": 0.11764705882352941,
-    "pct_debt_equity": NaN,
+    "pct_debt_equity": null,
     "pct_current_ratio": 0.06862745098039216
   },
   {
@@ -1062,12 +1062,12 @@
     "revenue_growth": -0.4,
     "profit_growth": -999.0,
     "roa": -0.0014200001,
-    "debt_to_equity": NaN,
+    "debt_to_equity": null,
     "current_ratio": 0.0,
     "pct_rev_growth": 0.0392156862745098,
     "pct_profit_growth": 0.029411764705882353,
     "pct_roa": 0.0196078431372549,
-    "pct_debt_equity": NaN,
+    "pct_debt_equity": null,
     "pct_current_ratio": 0.06862745098039216
   }
 ]
