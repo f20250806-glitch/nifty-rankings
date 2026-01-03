@@ -117,8 +117,8 @@ def fetch_stock_data(tickers):
 
 def calculate_percentiles(df, column, ascending=True):
     """Calculates percentile rank (0-1) for a column."""
-    # Handle NaNs: we can put them at the bottom
-    return df[column].rank(pct=True, ascending=ascending, na_option='bottom')
+    # Keep NaNs as NaNs so they don't affect ranking distribution
+    return df[column].rank(pct=True, ascending=ascending, na_option='keep')
 
 def rank_companies(data_list):
     """
@@ -142,7 +142,7 @@ def rank_companies(data_list):
     df['revenue_growth'].fillna(-999, inplace=True)
     df['profit_growth'].fillna(-999, inplace=True)
     df['roa'].fillna(-999, inplace=True)
-    df['debt_to_equity'].fillna(9999, inplace=True) # High debt is bad
+    # df['debt_to_equity'].fillna(9999, inplace=True) # REMOVED: Keep NaN for custom scoring
     df['current_ratio'].fillna(0, inplace=True)
     df['free_cash_flow'].fillna(-999999999, inplace=True)
     
@@ -161,10 +161,15 @@ def rank_companies(data_list):
     # Calculate Scores
     df['momentum_score'] = df['pct_rev_growth']  # Only Revenue Growth now
     
-    df['quality_score'] = (
-        df['pct_roa'] * 0.3333 + 
-        df['pct_debt_equity'] * 0.3333 + 
-        df['pct_current_ratio'] * 0.3333
+    # Quality Score: Dynamic Weighting
+    # If Debt/Equity is valid (available): 33% ROA, 33% D/E, 33% Current Ratio
+    # If Debt/Equity is missing (NaN): 50% ROA, 50% Current Ratio
+    
+    import numpy as np
+    df['quality_score'] = np.where(
+        df['pct_debt_equity'].notna(),
+        (df['pct_roa'] * 0.3333 + df['pct_debt_equity'] * 0.3333 + df['pct_current_ratio'] * 0.3333),
+        (df['pct_roa'] * 0.5 + df['pct_current_ratio'] * 0.5)
     )
     
     # Final Composite Score (User specified weights: 33% Momentum, 67% Quality)
@@ -173,8 +178,8 @@ def rank_companies(data_list):
     # Penalize negative revenue growth (User Rule: Multiply score by 0.65)
     df.loc[df['revenue_growth'] < 0, 'composite_score'] *= 0.65
     
-    # Scale to 0-100 for display
-    df['display_score'] = (df['composite_score'] * 100).round(0).astype(int)
+    # Fill NaN scores (if any remain) with 0 just in case
+    df['display_score'] = (df['composite_score'].fillna(0) * 100).round(0).astype(int)
     
     # Sort
     df_sorted = df.sort_values(by='composite_score', ascending=False)
@@ -222,7 +227,7 @@ def main():
             json.dump(output_data, f, indent=2)
             
         print(f"Success! Top 10 exported to {OUTPUT_JSON_PATH}")
-        print(top_10[['symbol', 'display_score']])
+        print(export_df[['symbol', 'display_score']].head(10))
         
     except Exception as e:
         print(f"Error: {e}")

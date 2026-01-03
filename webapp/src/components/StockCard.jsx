@@ -105,7 +105,7 @@ const StockCard = ({ rank, company }) => {
                             />
                             <MetricRow
                                 label="Debt to Equity"
-                                value={company.debt_to_equity ? company.debt_to_equity.toFixed(2) : '-'}
+                                value={company.debt_to_equity !== null && company.debt_to_equity !== undefined ? company.debt_to_equity.toFixed(2) : 'N/A'}
                                 percentile={company.pct_debt_equity}
                             />
                             <MetricRow
