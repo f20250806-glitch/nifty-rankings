@@ -71,7 +71,7 @@ def load_tickers_from_csv():
     raise ValueError("Could not read tickers from CSV properly.")
 
 def load_tickers():
-    return load_tickers_from_web()
+    return load_tickers_from_csv()
 
 def fetch_stock_data(tickers):
     """
