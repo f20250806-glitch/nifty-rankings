@@ -98,9 +98,8 @@ function App() {
     <div className="container">
       <header className="header">
         <div className="title-section">
-          <h1>
-            <span className="badge-icon">🇮🇳</span>
-            Nifty 50 Rankings
+          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+            Nifty 50 Rankings (Live)
           </h1>
           <div className="subtitle">Ranked by composite performance score</div>
         </div>
