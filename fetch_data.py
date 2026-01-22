@@ -10,8 +10,56 @@ SP500_CSV_PATH = "nifty50.csv"
 OUTPUT_JSON_PATH = "webapp/public/data.json"
 CACHE_DIR = "cache"
 
-def load_tickers():
+import requests
+
+def load_tickers_from_web():
+    """
+    Fetches the latest Nifty 50 tickers from Wikipedia.
+    Falls back to local CSV if web fetching fails.
+    """
+    wiki_url = "https://en.wikipedia.org/wiki/NIFTY_50"
+    try:
+        print(f"Attempting to fetch Nifty 50 list from {wiki_url}...")
+        
+        # Add User-Agent to mimic a browser
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
+        }
+        response = requests.get(wiki_url, headers=headers)
+        response.raise_for_status()
+        
+        tables = pd.read_html(response.text)
+        # The constituents table is usually the second table (index 1) or first (index 0)
+        # We look for a table with 'Symbol' or 'Ticker' column
+        nifty_table = None
+        for table in tables:
+            if 'Symbol' in table.columns:
+                nifty_table = table
+                break
+        
+        if nifty_table is not None:
+            tickers = nifty_table['Symbol'].tolist()
+            # Clean tickers: ensure they end with .NS (Wikipedia usually has just the symbol like "RELIANCE")
+            cleaned_tickers = []
+            for t in tickers:
+                t = t.strip()
+                if not t.endswith(".NS"):
+                    t = f"{t}.NS"
+                cleaned_tickers.append(t)
+            
+            print(f"Successfully fetched {len(cleaned_tickers)} tickers from Wikipedia.")
+            return cleaned_tickers
+        else:
+            print("Could not find Nifty 50 table on Wikipedia. Falling back to CSV.")
+            return load_tickers_from_csv()
+
+    except Exception as e:
+        print(f"Error fetching from web: {e}. Falling back to CSV.")
+        return load_tickers_from_csv()
+
+def load_tickers_from_csv():
     """Loads Nifty tickers from the local CSV."""
+    print(f"Loading tickers from local file: {SP500_CSV_PATH}...")
     if not os.path.exists(SP500_CSV_PATH):
         raise FileNotFoundError(f"{SP500_CSV_PATH} not found.")
     
@@ -30,6 +78,9 @@ def load_tickers():
         except:
             continue
     raise ValueError("Could not read tickers from CSV properly.")
+
+def load_tickers():
+    return load_tickers_from_web()
 
 def fetch_stock_data(tickers):
     """
