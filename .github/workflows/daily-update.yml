@@ -29,5 +29,5 @@ jobs:
       run: |
         git config --global user.name 'GitHub Action'
         git config --global user.email 'action@github.com'
-        git add webapp/public/data.json
+        git add webapp/public/rankings.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update rankings" && git push)

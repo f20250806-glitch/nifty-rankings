@@ -1,224 +1,109 @@
-import React, { useState, useEffect } from 'react';
-import StockCard from './components/StockCard';
-import initialData from '../public/data.json';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
-
-const COLORS = [
-  '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
-  '#ec4899', '#6366f1', '#14b8a6', '#f97316', '#84cc16',
-  '#0ea5e9', '#22c55e', '#eab308', '#f43f5e', '#a855f7',
-  '#d946ef', '#818cf8', '#0d9488', '#fb923c', '#65a30d'
-];
+import { useState, useEffect } from 'react'
+import { Search, Info, TrendingUp, ShieldCheck, DollarSign } from 'lucide-react'
+import RankingTable from './components/RankingTable'
+import SectorLeaders from './components/SectorLeaders'
+import StockDetailModal from './components/StockDetailModal'
 
 function App() {
-  const [data, setData] = useState([]);
-  const [stats, setStats] = useState({ marketCap: 0, avgGrowth: 0 });
-  const [theme, setTheme] = useState('light');
-  const [sectorLeaders, setSectorLeaders] = useState([]);
+  const [rankings, setRankings] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState('All')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedStock, setSelectedStock] = useState(null)
 
   useEffect(() => {
-    // Theme initialization
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    document.documentElement.setAttribute('data-theme', savedTheme);
-
-    // Data fetch
-    fetch('/data.json?t=' + new Date().getTime())
+    fetch('/rankings.json')
       .then(res => res.json())
-      .then(json => {
-        setData(json);
-        calculateStats(json);
-        calculateSectorLeaders(json);
+      .then(data => {
+        setRankings(data)
+        setLoading(false)
       })
-      .catch(err => {
-        console.error("Failed to fetch data", err);
-        setData(initialData);
-        calculateStats(initialData);
-        calculateSectorLeaders(initialData);
-      });
-  }, []);
+      .catch(err => console.error("Failed to load rankings", err))
+  }, [])
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
-
-  const calculateStats = (items) => {
-    if (!items || items.length === 0) return;
-    const totalCap = items.reduce((acc, curr) => acc + (curr.market_cap || 0), 0);
-    const avgGrowth = items.reduce((acc, curr) => acc + (curr.revenue_growth || 0), 0) / items.length;
-
-    setStats({
-      marketCap: totalCap,
-      avgGrowth: avgGrowth
-    });
-  };
-
-  const calculateSectorLeaders = (items) => {
-    // Group by sector
-    const sectors = {};
-    items.forEach(item => {
-      if (!sectors[item.sector]) {
-        sectors[item.sector] = [];
-      }
-      sectors[item.sector].push(item);
-    });
-
-    // Find top scorer in each sector
-    const leaders = Object.keys(sectors).map(sector => {
-      const companies = sectors[sector];
-      // Sort by display score descending
-      companies.sort((a, b) => b.display_score - a.display_score);
-      return {
-        name: sector,
-        leader: companies[0],
-        count: companies.length
-      };
-    });
-
-    // Sort sectors by their leader's score
-    // Sort sectors by their leader's score
-    leaders.sort((a, b) => b.leader.display_score - a.leader.display_score);
-
-    // Filter out Unknown sector
-    const validLeaders = leaders.filter(l => l.name !== 'Unknown');
-    setSectorLeaders(validLeaders);
-  };
-
-  const formatLargeNumber = (num) => {
-    if (!num) return '-';
-    if (num >= 1e7) return (num / 1e7).toFixed(2) + ' Cr';
-    if (num >= 1e5) return (num / 1e5).toFixed(2) + ' L';
-    return num.toString();
-  };
+  const filteredRankings = rankings.filter(stock => {
+    const matchesFilter = filter === 'All' ||
+      (filter === 'Banks' && stock.category === 'Banking & Finance') ||
+      (filter === 'Non-Banks' && stock.category === 'Non-Banking')
+    const matchesSearch = stock.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      stock.ticker.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesFilter && matchesSearch
+  })
 
   return (
-    <div className="container">
-      <header className="header">
-        <div className="title-section">
-          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-            Nifty 50 Rankings (Live)
-          </h1>
-          <div className="subtitle">Ranked by composite performance score</div>
-        </div>
-
-        <div className="header-controls">
-          <div className="timestamp">
-            Updated: Today, {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+    <div className="min-h-screen p-8">
+      <div className="max-w-[1600px] mx-auto space-y-8">
+        {/* Header */}
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+              Nifty 50 Rankings
+            </h1>
+            <p className="text-brand-muted mt-2">
+              Automated scoring based on Profitability, Valuation, Stability & Growth.
+            </p>
           </div>
 
-          <button className="theme-toggle" onClick={toggleTheme} title="Toggle Dark Mode">
-            {theme === 'light' ? '🌙' : '☀️'}
-          </button>
-        </div>
-      </header>
-
-      <div className="stats-grid" style={{ gridTemplateColumns: '1fr' }}>
-        <div className="stat-card">
-          <div className="stat-icon money">💲</div>
-          <div className="stat-content">
-            <div className="label">Total Market Cap</div>
-            <div className="value">₹{formatLargeNumber(stats.marketCap)}</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dashboard-grid">
-        {/* Main Rankings Column */}
-        <div className="rankings-list">
-          {data.map((company, index) => (
-            <StockCard
-              key={company.symbol}
-              rank={index + 1}
-              company={company}
-            />
-          ))}
-        </div>
-
-        {/* Sidebar Column */}
-        <aside className="sector-sidebar">
-          <h3 className="sidebar-title">
-            <span>🏆</span> Top by Sector
-          </h3>
-
-          {/* Portfolio Chart */}
-          <div style={{ height: '300px', marginBottom: '2rem' }}>
-            <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-secondary)', marginBottom: '0.5rem', textAlign: 'center' }}>
-              Ideal Portfolio Allocation (Aggressive)
-            </div>
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={(() => {
-                    // Calculate total for percentage, using cube to exaggerate differences
-                    const totalScore = sectorLeaders.reduce((acc, s) => acc + Math.pow(s.leader.display_score, 3), 0);
-                    return sectorLeaders.map(s => {
-                      const weight = Math.pow(s.leader.display_score, 3);
-                      return {
-                        name: s.leader.company,
-                        value: weight, // Used for slice size
-                        originalScore: s.leader.display_score,
-                        percent: ((weight / totalScore) * 100).toFixed(1)
-                      };
-                    });
-                  })()}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={60}
-                  outerRadius={80}
-                  paddingAngle={5}
-                  dataKey="value"
-                >
-                  {sectorLeaders.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <RechartsTooltip
-                  contentStyle={{
-                    backgroundColor: 'var(--color-surface)',
-                    border: '1px solid var(--color-border)',
-                    borderRadius: '8px',
-                    fontSize: '0.8rem'
-                  }}
-                  itemStyle={{ color: 'var(--color-text-primary)' }}
-                  formatter={(value, name, props) => [
-                    `${props.payload.percent}% (Score: ${props.payload.originalScore})`,
-                    props.payload.name
-                  ]}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-
-          <div className="sector-list">
-            {sectorLeaders.map((s, index) => (
-              <div className="sector-item" key={s.name}>
-                <div className="sector-header">
-                  <span className="sector-name" style={{ color: COLORS[index % COLORS.length] }}>{s.name}</span>
-                  {/* <span className="sector-count">{s.count} listed</span> */}
-                </div>
-
-                <div className="sector-leader">
-                  <div className="leader-name">
-                    {s.leader.company}
-                  </div>
-                  <div className="leader-score" style={{ backgroundColor: COLORS[index % COLORS.length], color: '#fff' }}>
-                    {s.leader.display_score}
-                  </div>
-                </div>
-              </div>
+          <div className="glass-panel p-1 rounded-lg flex text-sm">
+            {['All', 'Banks', 'Non-Banks'].map(Type => (
+              <button
+                key={Type}
+                onClick={() => setFilter(Type)}
+                className={`px-4 py-2 rounded-md transition-all ${filter === Type
+                    ? 'bg-brand-accent text-white shadow-lg'
+                    : 'text-brand-muted hover:text-white'
+                  }`}
+              >
+                {Type}
+              </button>
             ))}
           </div>
-        </aside>
-      </div>
+        </header>
 
-      <footer style={{ marginTop: '3rem', padding: '1rem', background: 'var(--color-surface)', borderRadius: '12px', fontSize: '0.875rem', color: 'var(--color-text-secondary)' }}>
-        <strong>Ranking Methodology:</strong> Companies are ranked based on a composite score considering Momentum (Revenue Growth) and Quality (ROA, Debt/Equity, Current Ratio).
-      </footer>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+          {/* Main Content (3 cols) */}
+          <div className="lg:col-span-3 space-y-6">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-brand-muted w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search by name or ticker..."
+                className="w-full bg-brand-card/50 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-white placeholder-brand-muted focus:outline-none focus:ring-2 focus:ring-brand-accent transition-all"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+
+            {loading ? (
+              <div className="text-center py-20 text-brand-muted animate-pulse">
+                Analyzing market data...
+              </div>
+            ) : (
+              <RankingTable
+                data={filteredRankings}
+                onRowClick={setSelectedStock}
+              />
+            )}
+          </div>
+
+          {/* Sidebar (1 col) */}
+          <div className="lg:col-span-1">
+            {!loading && <SectorLeaders data={rankings} />}
+          </div>
+
+        </div>
+
+        {/* Detail Modal */}
+        <StockDetailModal
+          stock={selectedStock}
+          onClose={() => setSelectedStock(null)}
+        />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

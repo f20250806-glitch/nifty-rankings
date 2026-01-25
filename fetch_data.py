@@ -1,279 +1,243 @@
-import pandas as pd
 import yfinance as yf
+import pandas as pd
 import json
-import time
 import os
-import numpy as np
+import sys
 
-# Constants
-SP500_CSV_PATH = "nifty50.csv"
-OUTPUT_JSON_PATH = "webapp/public/data.json"
-CACHE_DIR = "cache"
+# Hardcoded Nifty 50 Tickers (Updated Jan 2026)
+NIFTY_50_TICKERS = [
+    "ADANIENT.NS", "ADANIPORTS.NS", "APOLLOHOSP.NS", "ASIANPAINT.NS", "AXISBANK.NS",
+    "BAJAJ-AUTO.NS", "BAJFINANCE.NS", "BAJAJFINSV.NS", "BPCL.NS", "BHARTIARTL.NS",
+    "BRITANNIA.NS", "CIPLA.NS", "COALINDIA.NS", "DRREDDY.NS", "EICHERMOT.NS",
+    "GRASIM.NS", "HCLTECH.NS", "HDFCBANK.NS", "HDFCLIFE.NS", "HINDALCO.NS",
+    "HINDUNILVR.NS", "ICICIBANK.NS", "ITC.NS", "INFY.NS", "JSWSTEEL.NS",
+    "KOTAKBANK.NS", "LT.NS", "M&M.NS", "MARUTI.NS", "NTPC.NS",
+    "NESTLEIND.NS", "ONGC.NS", "POWERGRID.NS", "RELIANCE.NS", "SBILIFE.NS",
+    "SBIN.NS", "SUNPHARMA.NS", "TCS.NS", "TATACONSUM.NS", "TATAMOTORS.NS",
+    "TATASTEEL.NS", "TECHM.NS", "TITAN.NS", "ULTRACEMCO.NS", "WIPRO.NS",
+    # New Inclusions (2024-2026)
+    "TRENT.NS", "BEL.NS", "SHRIRAMFIN.NS", "INDIGO.NS", "MAXHEALTH.NS"
+]
 
-import requests
+BANK_TICKERS = [
+    "AXISBANK.NS", "HDFCBANK.NS", "ICICIBANK.NS", "KOTAKBANK.NS", 
+    "SBIN.NS", "BAJFINANCE.NS", "BAJAJFINSV.NS", "SHRIRAMFIN.NS" # Added Shriram (NBFC)
+]
 
-def load_tickers_from_web():
-    """
-    Fetches the latest Nifty 50 tickers from Wikipedia.
-    Falls back to local CSV if web fetching fails.
-    """
-    # Official Nifty 50 CSV URL
-    csv_url = "https://niftyindices.com/IndexConstituent/ind_nifty50list.csv"
-    print(f"Attempting to fetch Nifty 50 list from {csv_url}...")
+def get_metric(info, keys, default=0.0):
+    for key in keys:
+        if key in info and info[key] is not None:
+            return info[key]
+    return default
+
+def calculate_bank_score(info):
+    # Banks & Financials Logic (Revised)
+    # 1. Profitability (45%): ROA, ROE
+    roa = get_metric(info, ['returnOnAssets'], 0) * 100
+    roe = get_metric(info, ['returnOnEquity'], 0) * 100
     
-    # Add User-Agent to mimic a browser (crucial for niftyindices.com)
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
-    }
-    response = requests.get(csv_url, headers=headers)
-    response.raise_for_status()
+    # 2. Valuation (25%): P/B (Lower is better) - P/E Removed
+    pb = get_metric(info, ['priceToBook'])
     
-    import io
-    # Read the CSV content
-    df = pd.read_csv(io.StringIO(response.text))
+    # Valuation scoring: Inverse. 
+    # Heuristic: Good P/B < 3.
+    # We'll normalize roughly: Score = 100 / (Metric/Target). 
     
-    # The official CSV usually has a 'Symbol' column
-    if 'Symbol' in df.columns:
-        tickers = df['Symbol'].tolist()
-        # Clean tickers: ensure they end with .NS
-        cleaned_tickers = []
-        for t in tickers:
-            t = str(t).strip()
-            if not t.endswith(".NS"):
-                t = f"{t}.NS"
-            cleaned_tickers.append(t)
+    val_pb_score = 100
+    if pb and pb > 0:
+        val_pb_score = max(0, min(100, (1.5 / pb) * 50)) # 1.5 P/B is great
         
-        print(f"Successfully fetched {len(cleaned_tickers)} tickers from NiftyIndices.com.")
-        return cleaned_tickers
-    else:
-        raise ValueError("Could not find 'Symbol' column in the fetched CSV.")
+    # Valuation Total is just P/B now
+    valuation_total = val_pb_score
+    
+    # 3. Market Performance (30%): 1-Year Return
+    momentum = get_metric(info, ['52WeekChange'], 0) * 100
+    # Normalize: Assuming >20% is great (100), <0% is bad.
+    mom_score = max(0, min(100, (momentum + 20) * 2)) 
 
-def load_tickers_from_csv():
-    """Loads Nifty tickers from the local CSV."""
-    print(f"Loading tickers from local file: {SP500_CSV_PATH}...")
-    if not os.path.exists(SP500_CSV_PATH):
-        raise FileNotFoundError(f"{SP500_CSV_PATH} not found.")
+    # Weighted Sum
+    # Profitability (45%): Split equally between ROA and ROE?
+    score_roe = max(0, min(100, (roe / 15) * 100))
+    score_roa = max(0, min(100, (roa / 1.5) * 100))
+    profit_score = (score_roe + score_roa) / 2
     
-    # Try different encodings
-    for encoding in ['utf-8', 'latin1', 'cp1252']:
-        try:
-            df = pd.read_csv(SP500_CSV_PATH, encoding=encoding)
-            # Normalize column names
-            df.columns = [c.lower().strip() for c in df.columns]
-            
-            # Find the ticker column
-            if 'symbol' in df.columns:
-                return df['symbol'].dropna().unique().tolist()
-            elif 'ticker' in df.columns:
-                return df['ticker'].dropna().unique().tolist()
-        except:
-            continue
-    raise ValueError("Could not read tickers from CSV properly.")
+    final_score = (
+        (profit_score * 0.45) + 
+        (valuation_total * 0.25) + 
+        (mom_score * 0.30)
+    )
+    return max(0, min(100, final_score))
 
-def load_tickers():
-    return load_tickers_from_csv()
-
-def fetch_stock_data(tickers):
-    """
-    Fetches financial data for the list of tickers.
-    Returns a list of dictionaries with raw metrics.
-    """
-    data_list = []
+def calculate_non_bank_score(info):
+    # Non-Banks Logic (Revised)
+    # 1. Profitability (35%): ROE, EBITDA Margin
+    roe = get_metric(info, ['returnOnEquity'], 0) * 100
+    ebitda_margins = get_metric(info, ['ebitdaMargins'], 0) * 100
     
-    print(f"Fetching data for {len(tickers)} tickers...")
+    score_roe = max(0, min(100, (roe / 20) * 100)) 
+    score_margin = max(0, min(100, (ebitda_margins / 20) * 100))
+    profit_score = (score_roe + score_margin) / 2
     
-    # Batch processing could be faster, but yfinance Ticker object is good for detailed info
-    # We'll do it sequentially for safety against rate limits for this demo, 
-    # or use Tickers for batching if possible. yf.Tickers is better for batching.
+    # 2. Valuation (30%): EV/EBITDA (Lower better) - P/E Removed
+    ev_ebitda = get_metric(info, ['enterpriseToEbitda'])
     
-    # Splitting into chunks to avoid huge requests failing
-    chunk_size = 20
-    chunks = [tickers[i:i + chunk_size] for i in range(0, len(tickers), chunk_size)]
-    
-    total_chunks = len(chunks)
-    
-    for i, chunk in enumerate(chunks):
-        print(f"Processing chunk {i+1}/{total_chunks}...")
+    val_ev_score = 100
+    if ev_ebitda and ev_ebitda > 0:
+        val_ev_score = max(0, min(100, (12 / ev_ebitda) * 50))
         
-        # Use space-separated string for batch download if using download(), 
-        # but for .info we often need individual Ticker objects. 
-        # However, yf.Tickers(list) works well.
-        
-        # NOTE: yfinance's .info is not efficiently batchable via 'download'. 
-        # 'download' only gets price history. We need fundamental data.
-        # So we must iterate.
-        
-        for ticker_symbol in chunk:
-            try:
-                # Append .NS for Nifty stocks
-                sym = ticker_symbol.strip().upper()
-                if not sym.endswith(".NS"):
-                    sym = f"{sym}.NS"
-                
-                stock = yf.Ticker(sym)
-                info = stock.info
-                
-                # Extract Metrics
-                # Momentum: Revenue Growth, Profit Growth (Earnings Growth)
-                revenue_growth = info.get('revenueGrowth', None)
-                profit_growth = info.get('earningsGrowth', None)
-                
-                # Quality: ROA, Debt/Equity, Current Ratio, Free Cash Flow
-                roa = info.get('returnOnAssets', None)
-                debt_to_equity = info.get('debtToEquity', None)
-                current_ratio = info.get('currentRatio', None)
-                free_cash_flow = info.get('freeCashflow', None)
-                
-                # Metadata
-                market_cap = info.get('marketCap', 0)
-                price = info.get('currentPrice', 0.0)
-                company_name = info.get('longName', sym)
-                sector = info.get('sector', 'Unknown')
-                revenue = info.get('totalRevenue', 0)
-                
-                # We need all metrics to score properly. If critical ones are missing, we might skip.
-                # For now, we'll collect even with Nones and handle them later.
-                
-                data_list.append({
-                    "symbol": sym,
-                    "company": company_name,
-                    "sector": sector,
-                    "price": price,
-                    "market_cap": market_cap,
-                    "revenue": revenue,
-                    "momentum_metrics": {
-                        "revenue_growth": revenue_growth,
-                        "profit_growth": profit_growth
-                    },
-                    "quality_metrics": {
-                        "roa": roa,
-                        "debt_to_equity": debt_to_equity,
-                        "current_ratio": current_ratio,
-                        "free_cash_flow": free_cash_flow
-                    }
-                })
-                
-            except Exception as e:
-                print(f"Failed to fetch {ticker_symbol}: {e}")
-                
-    return data_list
+    # Valuation Score is just EV/EBITDA now
+    valuation_score = val_ev_score
 
-def calculate_percentiles(df, column, ascending=True):
-    """Calculates percentile rank (0-1) for a column."""
-    # Keep NaNs as NaNs so they don't affect ranking distribution
-    return df[column].rank(pct=True, ascending=ascending, na_option='keep')
-
-def rank_companies(data_list):
-    """
-    Ranks companies based on the user's logic:
-    Momentum: Revenue Growth (0.25), Profit Growth (0.75)
-    Quality: ROA (0.25), Debt/Equity (0.25), Current Ratio (0.25), FCF (0.25)
-    """
-    df = pd.DataFrame(data_list)
+    # 3. Financial Stability (20%): Debt/Equity
+    # D/E: Lower better (<1 good).
+    de = get_metric(info, ['debtToEquity'], 0) / 100 
     
-    # Flatten metrics for easier processing
-    df['revenue_growth'] = df['momentum_metrics'].apply(lambda x: x['revenue_growth'])
-    df['profit_growth'] = df['momentum_metrics'].apply(lambda x: x['profit_growth'])
+    score_de = max(0, min(100, (1 - (de/2)) * 100)) # If D/E is 2 (200%), score is 0. If 0, score 100.
     
-    df['roa'] = df['quality_metrics'].apply(lambda x: x['roa'])
-    df['debt_to_equity'] = df['quality_metrics'].apply(lambda x: x['debt_to_equity'])
-    df['current_ratio'] = df['quality_metrics'].apply(lambda x: x['current_ratio'])
-    df['free_cash_flow'] = df['quality_metrics'].apply(lambda x: x['free_cash_flow'])
+    stability_score = score_de
     
-    # Drop rows with minimal data if necessary, or just score them low
-    # Let's fill NaNs with safe defaults for ranking (usually bad values) for robustness
-    df['revenue_growth'].fillna(-999, inplace=True)
-    df['profit_growth'].fillna(-999, inplace=True)
-    df['roa'].fillna(-999, inplace=True)
-    # df['debt_to_equity'].fillna(9999, inplace=True) # REMOVED: Keep NaN for custom scoring
-    df['current_ratio'].fillna(0, inplace=True)
-    df['free_cash_flow'].fillna(-999999999, inplace=True)
+    # 4. Market Performance (15%): 1-Year Return
+    momentum = get_metric(info, ['52WeekChange'], 0) * 100
+    mom_score = max(0, min(100, (momentum + 20) * 2))
     
-    # Calculate Percentiles
-    # Momentum
-    df['pct_rev_growth'] = calculate_percentiles(df, 'revenue_growth', ascending=True)
-    df['pct_profit_growth'] = calculate_percentiles(df, 'profit_growth', ascending=True)
-    
-    # Quality
-    df['pct_roa'] = calculate_percentiles(df, 'roa', ascending=True)
-    # Debt to Equity: Lower is better, so ascending=False
-    df['pct_debt_equity'] = calculate_percentiles(df, 'debt_to_equity', ascending=False)
-    df['pct_current_ratio'] = calculate_percentiles(df, 'current_ratio', ascending=True)
-    df['pct_fcf'] = calculate_percentiles(df, 'free_cash_flow', ascending=True)
-    
-    # Calculate Scores
-    df['momentum_score'] = df['pct_rev_growth']  # Only Revenue Growth now
-    
-    # Quality Score: Dynamic Weighting
-    # If Debt/Equity is valid (available): 33% ROA, 33% D/E, 33% Current Ratio
-    # If Debt/Equity is missing (NaN): 50% ROA, 50% Current Ratio
-    
-    import numpy as np
-    df['quality_score'] = np.where(
-        df['pct_debt_equity'].notna(),
-        (df['pct_roa'] * 0.3333 + df['pct_debt_equity'] * 0.3333 + df['pct_current_ratio'] * 0.3333),
-        (df['pct_roa'] * 0.5 + df['pct_current_ratio'] * 0.5)
+    final_score = (
+        (profit_score * 0.35) +
+        (valuation_score * 0.30) +
+        (stability_score * 0.20) +
+        (mom_score * 0.15)
     )
     
-    # Final Composite Score (User specified weights: 33% Momentum, 67% Quality)
-    df['composite_score'] = (df['momentum_score'] * 0.33 + df['quality_score'] * 0.67)
-    
-    # Penalize negative revenue growth (User Rule: Multiply score by 0.65)
-    df.loc[df['revenue_growth'] < 0, 'composite_score'] *= 0.65
-    
-    # Fill NaN scores (if any remain) with 0 just in case
-    df['display_score'] = (df['composite_score'].fillna(0) * 100).round(0).astype(int)
-    
-    # Sort
-    df_sorted = df.sort_values(by='composite_score', ascending=False)
-    
-    return df_sorted
+    return max(0, min(100, final_score))
 
 def main():
-    print("Step 1: Loading Tickers...")
-    try:
-        tickers = load_tickers()
-        # limit for testing speed if needed, but user wants all. 
-        # For the first rapid pass, let's just do top 50 from the CSV to ensure it works quickly, 
-        # BUT user asked for "fetched all". 
-        # I will fetch a subset initially to verify logic, then I can run full.
-        # Actually, let's run a smaller set (e.g. 20) first to verify the script runs, 
-        # then I can let it run longer or use the mock data approach if it's too slow for the interaction loop.
-        # User said "fetches all", so I should try. But 500 requests is slow.
-        # I will start with a sample to prove it works.
-        # Processing all tickers
-        sample_tickers = tickers
-        print(f"Loaded {len(tickers)} tickers. Processing all for production...")
-        
-        data = fetch_stock_data(sample_tickers)
-        
-        print("Step 2: Ranking...")
-        ranked_df = rank_companies(data)
-        
-        # Select all ranked companies
-        export_df = ranked_df
-        
-        # Prepare for export
-        output_data = export_df[[
-            'symbol', 'company', 'sector', 'price', 'market_cap', 'revenue', 
-            'display_score', 'momentum_score', 'quality_score',
-            'revenue_growth', 'profit_growth', 
-            'roa', 'debt_to_equity', 'current_ratio',
-            'pct_rev_growth', 'pct_profit_growth', 
-            'pct_roa', 'pct_debt_equity', 'pct_current_ratio'
-        ]].replace({np.nan: None}).to_dict(orient='records')
-        
-        # ensure output dir
-        os.makedirs(os.path.dirname(OUTPUT_JSON_PATH), exist_ok=True)
-        
-        with open(OUTPUT_JSON_PATH, 'w') as f:
-            json.dump(output_data, f, indent=2)
+    print("Fetching data for Nifty 50...")
+    rankings = []
+    
+    # Create webapp/public if not exists (handling project structure)
+    os.makedirs('webapp/public', exist_ok=True)
+
+    for ticker in NIFTY_50_TICKERS:
+        try:
+            print(f"Processing {ticker}...")
+            stock = yf.Ticker(ticker)
+            info = stock.info
             
-        print(f"Success! Top 10 exported to {OUTPUT_JSON_PATH}")
-        print(export_df[['symbol', 'display_score']].head(10))
+            # Basic Info
+            name = info.get('shortName', ticker)
+            sector = info.get('sector', 'Unknown')
+            price = info.get('currentPrice')
+
+            # Strict check: If price or sector is missing, skip
+            if price is None:
+                print(f"Skipping {ticker}: Missing price data.")
+                continue
+
+            is_bank = ticker in BANK_TICKERS or 'Bank' in name
+            
+            # Check for essential metrics based on type
+            # If critical metrics are missing, we skip.
+            # Note: We are still using yfinance, so "check various sources" is limited to what yfinance provides.
+            # If we were to use other sources, we'd need more libraries/apis.
+            
+            try:
+                if is_bank:
+                    # Banks need ROA, ROE, etc.
+                    # If any key metric is 0 or None where it shouldn't be, we might skip.
+                    # But yfinance often returns None for some specific fields.
+                    # We will try to calculate score, if standard keys are missing, we skip.
+                    if info.get('returnOnEquity') is None:
+                         raise ValueError("Missing returnOnEquity")
+                    score = calculate_bank_score(info)
+                    category = "Banking & Finance"
+                else:
+                    if info.get('returnOnEquity') is None:
+                        raise ValueError("Missing returnOnEquity")
+                    score = calculate_non_bank_score(info)
+                    category = "Non-Banking"
+            except ValueError as ve:
+                print(f"Skipping {ticker}: {ve}")
+                continue
+            
+            rankings.append({
+                "ticker": ticker,
+                "name": name,
+                "sector": sector,
+                "price": price,
+                "score": round(score, 2),
+                "category": category,
+                "metrics": {
+                    "roe": round(get_metric(info, ['returnOnEquity'], 0) * 100, 2),
+                    "roa": round(get_metric(info, ['returnOnAssets'], 0) * 100, 2),
+                    "pe": round(get_metric(info, ['trailingPE', 'forwardPE'], 0), 2),
+                    "pb": round(get_metric(info, ['priceToBook'], 0), 2),
+                    "ev_ebitda": round(get_metric(info, ['enterpriseToEbitda'], 0), 2),
+                    "growth": round(get_metric(info, ['revenueGrowth'], 0) * 100, 2),
+                    "margins": round(get_metric(info, ['ebitdaMargins', 'profitMargins'], 0) * 100, 2),
+                    "de": round(get_metric(info, ['debtToEquity'], 0), 0), # Raw percent or ratio
+                    "momentum": round(get_metric(info, ['52WeekChange'], 0) * 100, 2)
+                }
+            })
+            
+        except Exception as e:
+            print(f"Error fetching {ticker}: {e}")
+            continue
+    
+    # Sort by score descending
+    rankings.sort(key=lambda x: x['score'], reverse=True)
+    
+    # Add Rank
+    for i, item in enumerate(rankings):
+        item['rank'] = i + 1
+
+    # Calculate Percentiles
+    # 1. Gather all values for each metric
+    metric_values = {}
+    for item in rankings:
+        for key, val in item['metrics'].items():
+            if key not in metric_values:
+                metric_values[key] = []
+            if val is not None:
+                metric_values[key].append(val)
+    
+    # 2. Sort values for ranking
+    for key in metric_values:
+        metric_values[key].sort()
         
-    except Exception as e:
-        print(f"Error: {e}")
+    # 3. Assign percentiles
+    from bisect import bisect_left
+    
+    for item in rankings:
+        item['percentiles'] = {}
+        for key, val in item['metrics'].items():
+            if val is not None and key in metric_values:
+                # Find rank
+                # For 'pe', 'pb', 'ev_ebitda', 'debt_to_equity': Lower is better (Higher percentile?)
+                # Usually Percentile means "better than X% of others".
+                # If Lower is better, then being at bottom of sorted list is "High Percentile".
+                
+                sorted_vals = metric_values[key]
+                rank = bisect_left(sorted_vals, val)
+                raw_percentile = (rank / len(sorted_vals)) * 100
+                
+                # Invert for metrics where lower is better
+                lower_is_better = ['pe', 'pb', 'ev_ebitda', 'de'] # Add relevant keys
+                # We need to ensure we map keys correctly.
+                # In previous step we added keys: 'roe', 'pe', 'growth'.
+                # We need to verify what keys are actually in 'metrics'.
+                
+                # Wait, I need to make sure 'metrics' in the loop has all the fields we want to show percentiles for.
+                # Currently it has 'roe', 'pe', 'growth'.
+                # I should add 'pb', 'ev_ebitda', 'de', 'margins', 'momentum' to 'metrics' first if I want to show them!
+                
+                if key in ['pe', 'pb', 'de']: # Common lower-is-better
+                     item['percentiles'][key] = round(100 - raw_percentile, 1)
+                else:
+                     item['percentiles'][key] = round(raw_percentile, 1)
+
+    with open('webapp/public/rankings.json', 'w') as f:
+        json.dump(rankings, f, indent=2)
+    
+    print("Done! Rankings saved to webapp/public/rankings.json")
 
 if __name__ == "__main__":
     main()
