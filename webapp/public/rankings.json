@@ -3,19 +3,19 @@
     "ticker": "AXISBANK.NS",
     "name": "AXIS BANK LIMITED",
     "sector": "Financial Services",
-    "price": 1386.7,
+    "price": 1387.6,
     "score": 81.95,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 13.63,
       "roa": 1.56,
-      "pe": 16.45,
+      "pe": 16.46,
       "pb": 2.08,
       "ev_ebitda": 0,
       "growth": 5.7,
       "margins": 0.0,
       "de": 0,
-      "momentum": 35.47
+      "momentum": 37.42
     },
     "rank": 1,
     "percentiles": {
@@ -34,19 +34,19 @@
     "ticker": "DRREDDY.NS",
     "name": "DR. REDDY S LABORATORIES",
     "sector": "Healthcare",
-    "price": 1307.4,
-    "score": 73.24,
+    "price": 1300.2,
+    "score": 74.72,
     "category": "Non-Banking",
     "metrics": {
       "roe": 16.1,
       "roa": 7.96,
-      "pe": 19.27,
-      "pb": 2.92,
-      "ev_ebitda": 12.44,
+      "pe": 19.16,
+      "pb": 2.91,
+      "ev_ebitda": 12.7,
       "growth": 4.4,
       "margins": 24.52,
       "de": 18.0,
-      "momentum": 9.95
+      "momentum": 15.89
     },
     "rank": 2,
     "percentiles": {
@@ -58,26 +58,26 @@
       "growth": 16.7,
       "margins": 66.7,
       "de": 41.7,
-      "momentum": 41.7
+      "momentum": 50.0
     }
   },
   {
     "ticker": "ICICIBANK.NS",
     "name": "ICICI BANK LTD.",
     "sector": "Financial Services",
-    "price": 1399.4,
-    "score": 72.21,
+    "price": 1384.8,
+    "score": 72.19,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 16.8,
       "roa": 2.14,
-      "pe": 19.11,
-      "pb": 2.87,
+      "pe": 18.92,
+      "pb": 2.84,
       "ev_ebitda": 0,
       "growth": 3.0,
       "margins": 0.0,
       "de": 0,
-      "momentum": 14.46
+      "momentum": 14.32
     },
     "rank": 3,
     "percentiles": {
@@ -89,33 +89,33 @@
       "growth": 0.0,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 50.0
+      "momentum": 41.7
     }
   },
   {
     "ticker": "ADANIPORTS.NS",
     "name": "ADANI PORT & SEZ LTD",
     "sector": "Industrials",
-    "price": 1555.8,
-    "score": 71.4,
+    "price": 1555.4,
+    "score": 71.15,
     "category": "Non-Banking",
     "metrics": {
       "roe": 19.41,
       "roa": 0,
-      "pe": 26.94,
+      "pe": 26.95,
       "pb": 5.01,
-      "ev_ebitda": 17.86,
+      "ev_ebitda": 18.32,
       "growth": 21.9,
       "margins": 57.86,
       "de": 82.0,
-      "momentum": 41.21
+      "momentum": 44.01
     },
     "rank": 4,
     "percentiles": {
       "roe": 58.3,
       "roa": 0.0,
       "pe": 33.3,
-      "pb": 58.3,
+      "pb": 50.0,
       "ev_ebitda": 58.3,
       "growth": 66.7,
       "margins": 91.7,
@@ -127,19 +127,19 @@
     "ticker": "BHARTIARTL.NS",
     "name": "BHARTI AIRTEL LIMITED",
     "sector": "Communication Services",
-    "price": 1997.3,
-    "score": 69.77,
+    "price": 1941.0,
+    "score": 69.11,
     "category": "Non-Banking",
     "metrics": {
       "roe": 23.12,
       "roa": 7.77,
-      "pe": 39.46,
-      "pb": 9.75,
-      "ev_ebitda": 13.4,
+      "pe": 38.41,
+      "pb": 9.47,
+      "ev_ebitda": 13.52,
       "growth": 19.6,
       "margins": 52.03,
       "de": 117.0,
-      "momentum": 23.49
+      "momentum": 21.68
     },
     "rank": 5,
     "percentiles": {
@@ -158,19 +158,19 @@
     "ticker": "HDFCBANK.NS",
     "name": "HDFC BANK LTD",
     "sector": "Financial Services",
-    "price": 923.6,
-    "score": 68.22,
+    "price": 910.5,
+    "score": 68.96,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 14.02,
       "roa": 1.75,
-      "pe": 20.63,
-      "pb": 2.52,
+      "pe": 20.33,
+      "pb": 2.48,
       "ev_ebitda": 0,
       "growth": 26.4,
       "margins": 0.0,
       "de": 0,
-      "momentum": 8.74
+      "momentum": 9.8
     },
     "rank": 6,
     "percentiles": {
@@ -189,19 +189,19 @@
     "ticker": "TCS.NS",
     "name": "TATA CONSULTANCY SERV LT",
     "sector": "Technology",
-    "price": 2676.3,
-    "score": 67.3,
+    "price": 2573.7,
+    "score": 67.35,
     "category": "Non-Banking",
     "metrics": {
       "roe": 42.63,
       "roa": 22.51,
-      "pe": 20.29,
-      "pb": 8.53,
-      "ev_ebitda": 13.59,
+      "pe": 19.51,
+      "pb": 8.2,
+      "ev_ebitda": 13.54,
       "growth": 4.9,
       "margins": 26.15,
       "de": 9.0,
-      "momentum": -26.92
+      "momentum": -26.26
     },
     "rank": 7,
     "percentiles": {
@@ -220,19 +220,19 @@
     "ticker": "WIPRO.NS",
     "name": "WIPRO LTD",
     "sector": "Technology",
-    "price": 205.89,
-    "score": 63.95,
+    "price": 200.14,
+    "score": 64.34,
     "category": "Non-Banking",
     "metrics": {
       "roe": 15.2,
       "roa": 6.77,
-      "pe": 16.33,
-      "pb": 2.4,
-      "ev_ebitda": 10.82,
+      "pe": 15.86,
+      "pb": 2.34,
+      "ev_ebitda": 10.58,
       "growth": 5.5,
       "margins": 18.55,
       "de": 22.0,
-      "momentum": -28.87
+      "momentum": -29.32
     },
     "rank": 8,
     "percentiles": {
@@ -251,26 +251,26 @@
     "ticker": "HCLTECH.NS",
     "name": "HCL TECHNOLOGIES LTD",
     "sector": "Technology",
-    "price": 1426.2,
-    "score": 56.09,
+    "price": 1339.2,
+    "score": 56.03,
     "category": "Non-Banking",
     "metrics": {
       "roe": 23.19,
       "roa": 12.87,
-      "pe": 23.53,
-      "pb": 5.24,
-      "ev_ebitda": 1363.28,
+      "pe": 22.1,
+      "pb": 4.92,
+      "ev_ebitda": 1353.49,
       "growth": 7.4,
       "margins": 19.67,
       "de": 10.0,
-      "momentum": -12.62
+      "momentum": -12.83
     },
     "rank": 9,
     "percentiles": {
       "roe": 75.0,
       "roa": 75.0,
       "pe": 41.7,
-      "pb": 50.0,
+      "pb": 58.3,
       "ev_ebitda": 91.7,
       "growth": 50.0,
       "margins": 50.0,
@@ -282,19 +282,19 @@
     "ticker": "INFY.NS",
     "name": "INFOSYS LIMITED",
     "sector": "Technology",
-    "price": 1327.5,
+    "price": 1275.5,
     "score": 54.09,
     "category": "Non-Banking",
     "metrics": {
       "roe": 32.68,
       "roa": 15.67,
-      "pe": 19.05,
-      "pb": 6.41,
-      "ev_ebitda": 1249.32,
+      "pe": 18.27,
+      "pb": 6.16,
+      "ev_ebitda": 1225.59,
       "growth": 3.2,
       "margins": 22.07,
       "de": 11.0,
-      "momentum": -23.29
+      "momentum": -24.9
     },
     "rank": 10,
     "percentiles": {
@@ -313,19 +313,19 @@
     "ticker": "SBILIFE.NS",
     "name": "SBI LIFE INSURANCE CO LTD",
     "sector": "Financial Services",
-    "price": 2109.6,
-    "score": 51.51,
+    "price": 2082.9,
+    "score": 51.48,
     "category": "Non-Banking",
     "metrics": {
       "roe": 13.92,
       "roa": 0.35,
-      "pe": 85.24,
-      "pb": 11.13,
-      "ev_ebitda": 73.39,
+      "pe": 84.4,
+      "pb": 10.98,
+      "ev_ebitda": 74.45,
       "growth": 144.5,
       "margins": 2.15,
       "de": 0,
-      "momentum": 39.93
+      "momentum": 43.34
     },
     "rank": 11,
     "percentiles": {
@@ -344,19 +344,19 @@
     "ticker": "HDFCLIFE.NS",
     "name": "HDFC LIFE INS CO LTD",
     "sector": "Financial Services",
-    "price": 742.45,
-    "score": 43.9,
+    "price": 734.75,
+    "score": 44.23,
     "category": "Non-Banking",
     "metrics": {
       "roe": 11.32,
       "roa": 0.37,
-      "pe": 84.95,
-      "pb": 9.09,
-      "ev_ebitda": 72.56,
+      "pe": 83.88,
+      "pb": 9.0,
+      "ev_ebitda": 73.91,
       "growth": 70.4,
       "margins": 2.11,
       "de": 18.0,
-      "momentum": 18.1
+      "momentum": 19.34
     },
     "rank": 12,
     "percentiles": {
