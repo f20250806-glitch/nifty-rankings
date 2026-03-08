@@ -9,7 +9,7 @@
     "metrics": {
       "roe": 13.63,
       "roa": 1.56,
-      "pe": 16.0,
+      "pe": 15.63,
       "pb": 1.97,
       "ev_ebitda": 0,
       "growth": 5.7,
@@ -40,7 +40,7 @@
     "metrics": {
       "roe": 16.1,
       "roa": 7.96,
-      "pe": 19.34,
+      "pe": 19.19,
       "pb": 2.92,
       "ev_ebitda": 12.67,
       "growth": 4.4,
@@ -52,7 +52,7 @@
     "percentiles": {
       "roe": 41.7,
       "roa": 66.7,
-      "pe": 66.7,
+      "pe": 58.3,
       "pb": 66.7,
       "ev_ebitda": 33.3,
       "growth": 16.7,
@@ -71,7 +71,7 @@
     "metrics": {
       "roe": 19.41,
       "roa": 0,
-      "pe": 25.98,
+      "pe": 25.58,
       "pb": 4.76,
       "ev_ebitda": 17.51,
       "growth": 21.9,
@@ -102,7 +102,7 @@
     "metrics": {
       "roe": 16.8,
       "roa": 2.14,
-      "pe": 18.52,
+      "pe": 17.92,
       "pb": 2.69,
       "ev_ebitda": 0,
       "growth": 3.0,
@@ -114,13 +114,13 @@
     "percentiles": {
       "roe": 50.0,
       "roa": 41.7,
-      "pe": 75.0,
+      "pe": 83.3,
       "pb": 75.0,
       "ev_ebitda": 0.0,
       "growth": 0.0,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 41.7
+      "momentum": 50.0
     }
   },
   {
@@ -133,7 +133,7 @@
     "metrics": {
       "roe": 42.63,
       "roa": 22.51,
-      "pe": 19.57,
+      "pe": 19.38,
       "pb": 8.15,
       "ev_ebitda": 12.91,
       "growth": 4.9,
@@ -145,7 +145,7 @@
     "percentiles": {
       "roe": 91.7,
       "roa": 91.7,
-      "pe": 58.3,
+      "pe": 50.0,
       "pb": 33.3,
       "ev_ebitda": 50.0,
       "growth": 25.0,
@@ -164,7 +164,7 @@
     "metrics": {
       "roe": 23.12,
       "roa": 7.77,
-      "pe": 37.73,
+      "pe": 37.04,
       "pb": 9.13,
       "ev_ebitda": 12.79,
       "growth": 19.6,
@@ -195,7 +195,7 @@
     "metrics": {
       "roe": 15.2,
       "roa": 6.77,
-      "pe": 15.51,
+      "pe": 15.48,
       "pb": 2.28,
       "ev_ebitda": 9.93,
       "growth": 5.5,
@@ -226,7 +226,7 @@
     "metrics": {
       "roe": 14.02,
       "roa": 1.75,
-      "pe": 19.57,
+      "pe": 19.12,
       "pb": 2.33,
       "ev_ebitda": 0,
       "growth": 26.4,
@@ -238,7 +238,7 @@
     "percentiles": {
       "roe": 25.0,
       "roa": 33.3,
-      "pe": 58.3,
+      "pe": 66.7,
       "pb": 83.3,
       "ev_ebitda": 0.0,
       "growth": 75.0,
@@ -252,18 +252,18 @@
     "name": "HCL TECHNOLOGIES LTD",
     "sector": "Technology",
     "price": 1356.7,
-    "score": 56.1,
+    "score": 56.15,
     "category": "Non-Banking",
     "metrics": {
       "roe": 23.19,
       "roa": 12.87,
-      "pe": 22.32,
-      "pb": 4.93,
+      "pe": 22.37,
+      "pb": 4.92,
       "ev_ebitda": 1287.49,
       "growth": 7.4,
       "margins": 19.67,
       "de": 10.0,
-      "momentum": -12.6
+      "momentum": -12.43
     },
     "rank": 9,
     "percentiles": {
@@ -288,8 +288,8 @@
     "metrics": {
       "roe": 32.68,
       "roa": 15.67,
-      "pe": 18.42,
-      "pb": 6.25,
+      "pe": 18.45,
+      "pb": 6.24,
       "ev_ebitda": 1207.95,
       "growth": 3.2,
       "margins": 22.07,
@@ -300,7 +300,7 @@
     "percentiles": {
       "roe": 83.3,
       "roa": 83.3,
-      "pe": 83.3,
+      "pe": 75.0,
       "pb": 41.7,
       "ev_ebitda": 83.3,
       "growth": 8.3,
@@ -325,7 +325,7 @@
       "growth": 144.5,
       "margins": 2.15,
       "de": 0,
-      "momentum": 37.02
+      "momentum": 36.79
     },
     "rank": 11,
     "percentiles": {
@@ -345,18 +345,18 @@
     "name": "HDFC LIFE INS CO LTD",
     "sector": "Financial Services",
     "price": 668.55,
-    "score": 41.49,
+    "score": 40.73,
     "category": "Non-Banking",
     "metrics": {
       "roe": 11.32,
       "roa": 0.37,
-      "pe": 78.1,
+      "pe": 76.32,
       "pb": 8.19,
       "ev_ebitda": 66.67,
       "growth": 70.4,
       "margins": 2.11,
       "de": 18.0,
-      "momentum": 9.33
+      "momentum": 6.81
     },
     "rank": 12,
     "percentiles": {
@@ -368,7 +368,7 @@
       "growth": 83.3,
       "margins": 25.0,
       "de": 41.7,
-      "momentum": 50.0
+      "momentum": 41.7
     }
   }
 ]
