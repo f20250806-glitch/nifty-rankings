@@ -19,15 +19,15 @@
     },
     "rank": 1,
     "percentiles": {
-      "roe": 82.6,
-      "roa": 56.5,
+      "roe": 83.3,
+      "roa": 58.3,
       "pe": 100.0,
-      "pb": 82.6,
-      "ev_ebitda": 26.1,
-      "growth": 60.9,
-      "margins": 73.9,
-      "de": 52.2,
-      "momentum": 87.0
+      "pb": 83.3,
+      "ev_ebitda": 25.0,
+      "growth": 58.3,
+      "margins": 75.0,
+      "de": 54.2,
+      "momentum": 87.5
     }
   },
   {
@@ -50,15 +50,15 @@
     },
     "rank": 2,
     "percentiles": {
-      "roe": 47.8,
-      "roa": 26.1,
-      "pe": 73.9,
-      "pb": 73.9,
+      "roe": 54.2,
+      "roa": 25.0,
+      "pe": 75.0,
+      "pb": 75.0,
       "ev_ebitda": 0.0,
-      "growth": 65.2,
+      "growth": 62.5,
       "margins": 0.0,
-      "de": 8.7,
-      "momentum": 95.7
+      "de": 8.3,
+      "momentum": 95.8
     }
   },
   {
@@ -81,15 +81,15 @@
     },
     "rank": 3,
     "percentiles": {
-      "roe": 4.3,
-      "roa": 43.5,
-      "pe": 26.1,
-      "pb": 52.2,
+      "roe": 4.2,
+      "roa": 41.7,
+      "pe": 25.0,
+      "pb": 50.0,
       "ev_ebitda": 0.0,
-      "growth": 17.4,
-      "margins": 52.2,
-      "de": 34.8,
-      "momentum": 47.8
+      "growth": 16.7,
+      "margins": 54.2,
+      "de": 37.5,
+      "momentum": 50.0
     }
   },
   {
@@ -112,15 +112,15 @@
     },
     "rank": 4,
     "percentiles": {
-      "roe": 39.1,
-      "roa": 65.2,
-      "pe": 65.2,
-      "pb": 69.6,
-      "ev_ebitda": 47.8,
-      "growth": 26.1,
-      "margins": 78.3,
-      "de": 43.5,
-      "momentum": 78.3
+      "roe": 45.8,
+      "roa": 66.7,
+      "pe": 66.7,
+      "pb": 70.8,
+      "ev_ebitda": 45.8,
+      "growth": 25.0,
+      "margins": 79.2,
+      "de": 45.8,
+      "momentum": 79.2
     }
   },
   {
@@ -143,15 +143,15 @@
     },
     "rank": 5,
     "percentiles": {
-      "roe": 95.7,
-      "roa": 91.3,
-      "pe": 8.7,
-      "pb": 4.3,
-      "ev_ebitda": 78.3,
-      "growth": 82.6,
-      "margins": 65.2,
-      "de": 65.2,
-      "momentum": 91.3
+      "roe": 95.8,
+      "roa": 91.7,
+      "pe": 8.3,
+      "pb": 4.2,
+      "ev_ebitda": 79.2,
+      "growth": 79.2,
+      "margins": 66.7,
+      "de": 66.7,
+      "momentum": 91.7
     }
   },
   {
@@ -174,14 +174,14 @@
     },
     "rank": 6,
     "percentiles": {
-      "roe": 91.3,
-      "roa": 95.7,
-      "pe": 69.6,
-      "pb": 26.1,
-      "ev_ebitda": 34.8,
-      "growth": 47.8,
-      "margins": 82.6,
-      "de": 60.9,
+      "roe": 91.7,
+      "roa": 95.8,
+      "pe": 70.8,
+      "pb": 25.0,
+      "ev_ebitda": 33.3,
+      "growth": 45.8,
+      "margins": 83.3,
+      "de": 62.5,
       "momentum": 0.0
     }
   },
@@ -205,15 +205,15 @@
     },
     "rank": 7,
     "percentiles": {
-      "roe": 13.0,
-      "roa": 13.0,
-      "pe": 95.7,
+      "roe": 12.5,
+      "roa": 8.3,
+      "pe": 95.8,
       "pb": 100.0,
       "ev_ebitda": 0.0,
-      "growth": 8.7,
+      "growth": 8.3,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 73.9
+      "momentum": 75.0
     }
   },
   {
@@ -221,30 +221,30 @@
     "name": "ADANI PORT & SEZ LTD",
     "sector": "Industrials",
     "price": 1675.5,
-    "score": 68.53,
+    "score": 67.03,
     "category": "Non-Banking",
     "metrics": {
-      "roe": 19.41,
-      "roa": 0,
+      "roe": 15.59,
+      "roa": 6.76,
       "pe": 28.8,
       "pb": 5.4,
-      "ev_ebitda": 19.36,
-      "growth": 21.9,
-      "margins": 57.86,
-      "de": 82.0,
+      "ev_ebitda": 19.18,
+      "growth": 26.5,
+      "margins": 58.99,
+      "de": 64.0,
       "momentum": 23.03
     },
     "rank": 8,
     "percentiles": {
-      "roe": 60.9,
-      "roa": 0.0,
-      "pe": 43.5,
-      "pb": 39.1,
-      "ev_ebitda": 65.2,
-      "growth": 78.3,
-      "margins": 95.7,
-      "de": 21.7,
-      "momentum": 82.6
+      "roe": 41.7,
+      "roa": 50.0,
+      "pe": 45.8,
+      "pb": 37.5,
+      "ev_ebitda": 62.5,
+      "growth": 83.3,
+      "margins": 95.8,
+      "de": 25.0,
+      "momentum": 83.3
     }
   },
   {
@@ -267,15 +267,15 @@
     },
     "rank": 9,
     "percentiles": {
-      "roe": 34.8,
-      "roa": 52.2,
-      "pe": 87.0,
-      "pb": 87.0,
-      "ev_ebitda": 30.4,
-      "growth": 43.5,
-      "margins": 47.8,
-      "de": 39.1,
-      "momentum": 26.1
+      "roe": 37.5,
+      "roa": 54.2,
+      "pe": 87.5,
+      "pb": 87.5,
+      "ev_ebitda": 29.2,
+      "growth": 41.7,
+      "margins": 50.0,
+      "de": 41.7,
+      "momentum": 25.0
     }
   },
   {
@@ -298,15 +298,15 @@
     },
     "rank": 10,
     "percentiles": {
-      "roe": 52.2,
-      "roa": 69.6,
-      "pe": 52.2,
-      "pb": 47.8,
-      "ev_ebitda": 56.5,
-      "growth": 56.5,
-      "margins": 34.8,
-      "de": 73.9,
-      "momentum": 43.5
+      "roe": 58.3,
+      "roa": 70.8,
+      "pe": 54.2,
+      "pb": 45.8,
+      "ev_ebitda": 54.2,
+      "growth": 54.2,
+      "margins": 37.5,
+      "de": 75.0,
+      "momentum": 45.8
     }
   },
   {
@@ -329,15 +329,15 @@
     },
     "rank": 11,
     "percentiles": {
-      "roe": 65.2,
-      "roa": 73.9,
-      "pe": 21.7,
-      "pb": 13.0,
-      "ev_ebitda": 69.6,
-      "growth": 21.7,
-      "margins": 69.6,
-      "de": 78.3,
-      "momentum": 39.1
+      "roe": 66.7,
+      "roa": 75.0,
+      "pe": 20.8,
+      "pb": 12.5,
+      "ev_ebitda": 70.8,
+      "growth": 20.8,
+      "margins": 70.8,
+      "de": 79.2,
+      "momentum": 37.5
     }
   },
   {
@@ -360,15 +360,15 @@
     },
     "rank": 12,
     "percentiles": {
-      "roe": 56.5,
-      "roa": 34.8,
-      "pe": 34.8,
-      "pb": 43.5,
+      "roe": 62.5,
+      "roa": 33.3,
+      "pe": 37.5,
+      "pb": 41.7,
       "ev_ebitda": 0.0,
-      "growth": 87.0,
+      "growth": 87.5,
       "margins": 0.0,
-      "de": 4.3,
-      "momentum": 65.2
+      "de": 4.2,
+      "momentum": 66.7
     }
   },
   {
@@ -391,15 +391,15 @@
     },
     "rank": 13,
     "percentiles": {
-      "roe": 69.6,
-      "roa": 60.9,
-      "pe": 30.4,
-      "pb": 21.7,
-      "ev_ebitda": 52.2,
-      "growth": 73.9,
-      "margins": 91.3,
-      "de": 17.4,
-      "momentum": 56.5
+      "roe": 70.8,
+      "roa": 62.5,
+      "pe": 29.2,
+      "pb": 20.8,
+      "ev_ebitda": 50.0,
+      "growth": 70.8,
+      "margins": 91.7,
+      "de": 20.8,
+      "momentum": 58.3
     }
   },
   {
@@ -422,15 +422,15 @@
     },
     "rank": 14,
     "percentiles": {
-      "roe": 26.1,
-      "roa": 47.8,
-      "pe": 47.8,
-      "pb": 60.9,
-      "ev_ebitda": 60.9,
-      "growth": 91.3,
-      "margins": 30.4,
+      "roe": 29.2,
+      "roa": 45.8,
+      "pe": 50.0,
+      "pb": 58.3,
+      "ev_ebitda": 58.3,
+      "growth": 91.7,
+      "margins": 29.2,
       "de": 100.0,
-      "momentum": 69.6
+      "momentum": 70.8
     }
   },
   {
@@ -454,14 +454,14 @@
     "rank": 15,
     "percentiles": {
       "roe": 0.0,
-      "roa": 30.4,
-      "pe": 56.5,
-      "pb": 91.3,
-      "ev_ebitda": 43.5,
-      "growth": 52.2,
-      "margins": 39.1,
-      "de": 26.1,
-      "momentum": 52.2
+      "roa": 29.2,
+      "pe": 58.3,
+      "pb": 91.7,
+      "ev_ebitda": 41.7,
+      "growth": 50.0,
+      "margins": 41.7,
+      "de": 29.2,
+      "momentum": 54.2
     }
   },
   {
@@ -484,15 +484,15 @@
     },
     "rank": 16,
     "percentiles": {
-      "roe": 43.5,
-      "roa": 21.7,
-      "pe": 82.6,
-      "pb": 78.3,
+      "roe": 50.0,
+      "roa": 16.7,
+      "pe": 83.3,
+      "pb": 79.2,
       "ev_ebitda": 0.0,
-      "growth": 95.7,
+      "growth": 95.8,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 34.8
+      "momentum": 33.3
     }
   },
   {
@@ -515,15 +515,15 @@
     },
     "rank": 17,
     "percentiles": {
-      "roe": 78.3,
-      "roa": 82.6,
-      "pe": 4.3,
-      "pb": 8.7,
-      "ev_ebitda": 73.9,
-      "growth": 69.6,
-      "margins": 43.5,
-      "de": 30.4,
-      "momentum": 8.7
+      "roe": 79.2,
+      "roa": 83.3,
+      "pe": 4.2,
+      "pb": 8.3,
+      "ev_ebitda": 75.0,
+      "growth": 66.7,
+      "margins": 45.8,
+      "de": 33.3,
+      "momentum": 8.3
     }
   },
   {
@@ -546,15 +546,15 @@
     },
     "rank": 18,
     "percentiles": {
-      "roe": 73.9,
-      "roa": 78.3,
-      "pe": 60.9,
-      "pb": 56.5,
-      "ev_ebitda": 95.7,
-      "growth": 30.4,
-      "margins": 56.5,
-      "de": 73.9,
-      "momentum": 4.3
+      "roe": 75.0,
+      "roa": 79.2,
+      "pe": 62.5,
+      "pb": 54.2,
+      "ev_ebitda": 95.8,
+      "growth": 29.2,
+      "margins": 58.3,
+      "de": 75.0,
+      "momentum": 4.2
     }
   },
   {
@@ -577,15 +577,15 @@
     },
     "rank": 19,
     "percentiles": {
-      "roe": 87.0,
-      "roa": 87.0,
-      "pe": 91.3,
-      "pb": 34.8,
-      "ev_ebitda": 91.3,
-      "growth": 39.1,
-      "margins": 60.9,
-      "de": 60.9,
-      "momentum": 13.0
+      "roe": 87.5,
+      "roa": 87.5,
+      "pe": 91.7,
+      "pb": 33.3,
+      "ev_ebitda": 91.7,
+      "growth": 37.5,
+      "margins": 62.5,
+      "de": 62.5,
+      "momentum": 12.5
     }
   },
   {
@@ -600,23 +600,23 @@
       "roa": 4.92,
       "pe": 29.06,
       "pb": 3.62,
-      "ev_ebitda": 12.06,
-      "growth": 6.2,
-      "margins": 37.77,
+      "ev_ebitda": 12.08,
+      "growth": 5.3,
+      "margins": 38.04,
       "de": 256.0,
       "momentum": -13.77
     },
     "rank": 20,
     "percentiles": {
-      "roe": 30.4,
-      "roa": 39.1,
-      "pe": 39.1,
-      "pb": 65.2,
-      "ev_ebitda": 39.1,
-      "growth": 34.8,
-      "margins": 87.0,
-      "de": 13.0,
-      "momentum": 30.4
+      "roe": 33.3,
+      "roa": 37.5,
+      "pe": 41.7,
+      "pb": 66.7,
+      "ev_ebitda": 37.5,
+      "growth": 29.2,
+      "margins": 87.5,
+      "de": 12.5,
+      "momentum": 29.2
     }
   },
   {
@@ -639,15 +639,15 @@
     },
     "rank": 21,
     "percentiles": {
-      "roe": 21.7,
-      "roa": 17.4,
-      "pe": 78.3,
-      "pb": 95.7,
+      "roe": 25.0,
+      "roa": 12.5,
+      "pe": 79.2,
+      "pb": 95.8,
       "ev_ebitda": 0.0,
-      "growth": 13.0,
+      "growth": 12.5,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 21.7
+      "momentum": 20.8
     }
   },
   {
@@ -670,15 +670,46 @@
     },
     "rank": 22,
     "percentiles": {
-      "roe": 17.4,
-      "roa": 4.3,
-      "pe": 13.0,
-      "pb": 17.4,
-      "ev_ebitda": 87.0,
+      "roe": 20.8,
+      "roa": 0.0,
+      "pe": 12.5,
+      "pb": 16.7,
+      "ev_ebitda": 87.5,
       "growth": 0.0,
-      "margins": 26.1,
+      "margins": 25.0,
       "de": 100.0,
-      "momentum": 60.9
+      "momentum": 62.5
+    }
+  },
+  {
+    "ticker": "ADANIENT.NS",
+    "name": "ADANI ENTERPRISES LIMITED",
+    "sector": "Energy",
+    "price": 2410.5,
+    "score": 43.73,
+    "category": "Non-Banking",
+    "metrics": {
+      "roe": 13.66,
+      "roa": 2.14,
+      "pe": 32.71,
+      "pb": 3.84,
+      "ev_ebitda": 29.41,
+      "growth": 20.3,
+      "margins": 13.92,
+      "de": 120.0,
+      "momentum": -1.92
+    },
+    "rank": 23,
+    "percentiles": {
+      "roe": 16.7,
+      "roa": 20.8,
+      "pe": 33.3,
+      "pb": 62.5,
+      "ev_ebitda": 66.7,
+      "growth": 75.0,
+      "margins": 33.3,
+      "de": 16.7,
+      "momentum": 41.7
     }
   },
   {
@@ -699,17 +730,17 @@
       "de": 17.0,
       "momentum": -20.57
     },
-    "rank": 23,
+    "rank": 24,
     "percentiles": {
-      "roe": 8.7,
-      "roa": 4.3,
-      "pe": 17.4,
-      "pb": 30.4,
-      "ev_ebitda": 82.6,
-      "growth": 4.3,
-      "margins": 21.7,
-      "de": 47.8,
-      "momentum": 17.4
+      "roe": 8.3,
+      "roa": 0.0,
+      "pe": 16.7,
+      "pb": 29.2,
+      "ev_ebitda": 83.3,
+      "growth": 4.2,
+      "margins": 20.8,
+      "de": 50.0,
+      "momentum": 16.7
     }
   }
 ]
