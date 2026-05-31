@@ -87,7 +87,7 @@
       "pb": 100.0,
       "ev_ebitda": 18.8,
       "growth": 18.8,
-      "margins": 43.8,
+      "margins": 45.8,
       "de": 39.6,
       "momentum": 64.6
     }
@@ -242,7 +242,7 @@
       "pb": 64.6,
       "ev_ebitda": 45.8,
       "growth": 62.5,
-      "margins": 39.6,
+      "margins": 41.7,
       "de": 25.0,
       "momentum": 89.6
     }
@@ -364,7 +364,7 @@
       "roa": 95.8,
       "pe": 4.2,
       "pb": 2.1,
-      "ev_ebitda": 89.6,
+      "ev_ebitda": 87.5,
       "growth": 83.3,
       "margins": 68.8,
       "de": 68.8,
@@ -583,40 +583,9 @@
       "pb": 68.8,
       "ev_ebitda": 27.1,
       "growth": 54.2,
-      "margins": 33.3,
+      "margins": 35.4,
       "de": 27.1,
       "momentum": 91.7
-    }
-  },
-  {
-    "ticker": "ADANIPORTS.NS",
-    "name": "ADANI PORT & SEZ LTD",
-    "sector": "Industrials",
-    "price": 1804.6,
-    "score": 66.33,
-    "category": "Non-Banking",
-    "metrics": {
-      "roe": 15.59,
-      "roa": 6.76,
-      "pe": 30.96,
-      "pb": 4.32,
-      "ev_ebitda": 20.67,
-      "growth": 26.5,
-      "margins": 58.99,
-      "de": 64.0,
-      "momentum": 22.93
-    },
-    "rank": 20,
-    "percentiles": {
-      "roe": 45.8,
-      "roa": 50.0,
-      "pe": 41.7,
-      "pb": 52.1,
-      "ev_ebitda": 62.5,
-      "growth": 85.4,
-      "margins": 95.8,
-      "de": 33.3,
-      "momentum": 85.4
     }
   },
   {
@@ -637,7 +606,7 @@
       "de": 23.0,
       "momentum": -17.53
     },
-    "rank": 21,
+    "rank": 20,
     "percentiles": {
       "roe": 43.8,
       "roa": 52.1,
@@ -648,6 +617,37 @@
       "margins": 52.1,
       "de": 52.1,
       "momentum": 14.6
+    }
+  },
+  {
+    "ticker": "ADANIPORTS.NS",
+    "name": "ADANI PORT & SEZ LTD",
+    "sector": "Industrials",
+    "price": 1804.6,
+    "score": 66.12,
+    "category": "Non-Banking",
+    "metrics": {
+      "roe": 15.59,
+      "roa": 6.76,
+      "pe": 30.96,
+      "pb": 4.32,
+      "ev_ebitda": 21.16,
+      "growth": 26.5,
+      "margins": 57.94,
+      "de": 64.0,
+      "momentum": 22.93
+    },
+    "rank": 21,
+    "percentiles": {
+      "roe": 45.8,
+      "roa": 50.0,
+      "pe": 41.7,
+      "pb": 52.1,
+      "ev_ebitda": 62.5,
+      "growth": 85.4,
+      "margins": 95.8,
+      "de": 33.3,
+      "momentum": 85.4
     }
   },
   {
@@ -707,7 +707,7 @@
       "pb": 45.8,
       "ev_ebitda": 50.0,
       "growth": 58.3,
-      "margins": 37.5,
+      "margins": 39.6,
       "de": 72.9,
       "momentum": 35.4
     }
@@ -922,7 +922,7 @@
       "roa": 93.8,
       "pe": 20.8,
       "pb": 4.2,
-      "ev_ebitda": 75.0,
+      "ev_ebitda": 72.9,
       "growth": 37.5,
       "margins": 47.9,
       "de": 50.0,
@@ -986,7 +986,7 @@
       "pb": 14.6,
       "ev_ebitda": 66.7,
       "growth": 72.9,
-      "margins": 35.4,
+      "margins": 37.5,
       "de": 29.2,
       "momentum": 79.2
     }
@@ -1017,7 +1017,7 @@
       "pb": 85.4,
       "ev_ebitda": 41.7,
       "growth": 54.2,
-      "margins": 41.7,
+      "margins": 43.8,
       "de": 41.7,
       "momentum": 29.2
     }
@@ -1032,7 +1032,7 @@
     "metrics": {
       "roe": 16.36,
       "roa": 2.08,
-      "pe": 17.04,
+      "pe": 16.81,
       "pb": 2.48,
       "ev_ebitda": 0,
       "growth": 66.9,
@@ -1178,37 +1178,6 @@
     }
   },
   {
-    "ticker": "TRENT.NS",
-    "name": "TRENT LTD",
-    "sector": "Consumer Cyclical",
-    "price": 4224.0,
-    "score": 54.26,
-    "category": "Non-Banking",
-    "metrics": {
-      "roe": 27.13,
-      "roa": 13.67,
-      "pe": 87.22,
-      "pb": 21.5,
-      "ev_ebitda": 41.36,
-      "growth": 19.2,
-      "margins": 18.3,
-      "de": 36.0,
-      "momentum": -24.86
-    },
-    "rank": 39,
-    "percentiles": {
-      "roe": 75.0,
-      "roa": 85.4,
-      "pe": 2.1,
-      "pb": 8.3,
-      "ev_ebitda": 81.2,
-      "growth": 77.1,
-      "margins": 45.8,
-      "de": 43.8,
-      "momentum": 8.3
-    }
-  },
-  {
     "ticker": "INFY.NS",
     "name": "INFOSYS LIMITED",
     "sector": "Technology",
@@ -1226,7 +1195,7 @@
       "de": 10.0,
       "momentum": -25.29
     },
-    "rank": 40,
+    "rank": 39,
     "percentiles": {
       "roe": 89.6,
       "roa": 89.6,
@@ -1257,7 +1226,7 @@
       "de": 98.0,
       "momentum": 10.79
     },
-    "rank": 41,
+    "rank": 40,
     "percentiles": {
       "roe": 56.2,
       "roa": 29.2,
@@ -1288,7 +1257,7 @@
       "de": 0,
       "momentum": -22.93
     },
-    "rank": 42,
+    "rank": 41,
     "percentiles": {
       "roe": 31.2,
       "roa": 8.3,
@@ -1319,13 +1288,13 @@
       "de": 32.0,
       "momentum": -16.19
     },
-    "rank": 43,
+    "rank": 42,
     "percentiles": {
       "roe": 33.3,
       "roa": 54.2,
       "pe": 14.6,
       "pb": 20.8,
-      "ev_ebitda": 83.3,
+      "ev_ebitda": 81.2,
       "growth": 52.1,
       "margins": 81.2,
       "de": 45.8,
@@ -1333,34 +1302,34 @@
     }
   },
   {
-    "ticker": "ADANIENT.NS",
-    "name": "ADANI ENTERPRISES LIMITED",
-    "sector": "Energy",
-    "price": 2937.4,
-    "score": 48.42,
+    "ticker": "TRENT.NS",
+    "name": "TRENT LTD",
+    "sector": "Consumer Cyclical",
+    "price": 4224.0,
+    "score": 49.23,
     "category": "Non-Banking",
     "metrics": {
-      "roe": 13.66,
-      "roa": 2.14,
-      "pe": 39.84,
-      "pb": 4.68,
-      "ev_ebitda": 34.29,
-      "growth": 20.3,
-      "margins": 13.92,
-      "de": 120.0,
-      "momentum": 16.62
+      "roe": 27.13,
+      "roa": 13.71,
+      "pe": 86.95,
+      "pb": 21.5,
+      "ev_ebitda": 54.92,
+      "growth": 19.2,
+      "margins": 13.78,
+      "de": 36.0,
+      "momentum": -24.86
     },
-    "rank": 44,
+    "rank": 43,
     "percentiles": {
-      "roe": 25.0,
-      "roa": 14.6,
-      "pe": 33.3,
-      "pb": 50.0,
-      "ev_ebitda": 72.9,
-      "growth": 79.2,
-      "margins": 31.2,
-      "de": 16.7,
-      "momentum": 72.9
+      "roe": 75.0,
+      "roa": 85.4,
+      "pe": 2.1,
+      "pb": 8.3,
+      "ev_ebitda": 89.6,
+      "growth": 77.1,
+      "margins": 33.3,
+      "de": 43.8,
+      "momentum": 8.3
     }
   },
   {
@@ -1381,17 +1350,48 @@
       "de": 12.0,
       "momentum": 5.18
     },
-    "rank": 45,
+    "rank": 44,
     "percentiles": {
       "roe": 2.1,
       "roa": 25.0,
       "pe": 6.2,
       "pb": 33.3,
-      "ev_ebitda": 85.4,
+      "ev_ebitda": 83.3,
       "growth": 70.8,
       "margins": 29.2,
       "de": 62.5,
       "momentum": 52.1
+    }
+  },
+  {
+    "ticker": "ADANIENT.NS",
+    "name": "ADANI ENTERPRISES LIMITED",
+    "sector": "Energy",
+    "price": 2937.4,
+    "score": 47.64,
+    "category": "Non-Banking",
+    "metrics": {
+      "roe": 13.66,
+      "roa": 2.18,
+      "pe": 39.84,
+      "pb": 4.68,
+      "ev_ebitda": 36.16,
+      "growth": 20.3,
+      "margins": 13.35,
+      "de": 120.0,
+      "momentum": 16.62
+    },
+    "rank": 45,
+    "percentiles": {
+      "roe": 25.0,
+      "roa": 14.6,
+      "pe": 33.3,
+      "pb": 50.0,
+      "ev_ebitda": 75.0,
+      "growth": 79.2,
+      "margins": 31.2,
+      "de": 16.7,
+      "momentum": 72.9
     }
   },
   {
@@ -1405,7 +1405,7 @@
       "roe": 13.7,
       "roa": 0.35,
       "pe": 74.06,
-      "pb": 9.65,
+      "pb": 9.62,
       "ev_ebitda": 65.09,
       "growth": -82.2,
       "margins": 2.47,
@@ -1449,7 +1449,7 @@
       "roa": 68.8,
       "pe": 10.4,
       "pb": 6.2,
-      "ev_ebitda": 87.5,
+      "ev_ebitda": 85.4,
       "growth": 97.9,
       "margins": 20.8,
       "de": 8.3,
