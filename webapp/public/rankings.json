@@ -4,15 +4,15 @@
     "name": "STATE BANK OF INDIA",
     "sector": "Financial Services",
     "price": 1097.2,
-    "score": 80.17,
+    "score": 80.52,
     "category": "Banking & Finance",
     "metrics": {
-      "roe": 15.48,
-      "roa": 1.11,
-      "pe": 11.91,
+      "roe": 15.18,
+      "roa": 1.13,
+      "pe": 12.03,
       "pb": 1.7,
       "ev_ebitda": 0,
-      "growth": 7.1,
+      "growth": 10.3,
       "margins": 0.0,
       "de": 0,
       "momentum": 33.24
@@ -71,7 +71,7 @@
     "metrics": {
       "roe": 47.74,
       "roa": 24.48,
-      "pe": 17.24,
+      "pe": 17.82,
       "pb": 8.09,
       "ev_ebitda": 11.86,
       "growth": 13.9,
@@ -103,7 +103,7 @@
       "roe": 20.15,
       "roa": 8.16,
       "pe": 40.98,
-      "pb": 7.39,
+      "pb": 7.55,
       "ev_ebitda": 12.24,
       "growth": 18.4,
       "margins": 52.14,
@@ -133,7 +133,7 @@
     "metrics": {
       "roe": 16.13,
       "roa": 7.26,
-      "pe": 14.79,
+      "pe": 14.91,
       "pb": 2.39,
       "ev_ebitda": 9.58,
       "growth": 10.6,
@@ -190,7 +190,7 @@
     "name": "APOLLO HOSPITALS ENTER. L",
     "sector": "Healthcare",
     "price": 8945.0,
-    "score": 58.69,
+    "score": 58.56,
     "category": "Non-Banking",
     "metrics": {
       "roe": 21.5,
@@ -201,7 +201,7 @@
       "growth": 18.1,
       "margins": 13.73,
       "de": 85.0,
-      "momentum": 23.63
+      "momentum": 23.23
     },
     "rank": 7,
     "percentiles": {
@@ -226,7 +226,7 @@
     "metrics": {
       "roe": 18.5,
       "roa": 0,
-      "pe": 20.16,
+      "pe": 19.69,
       "pb": 3.18,
       "ev_ebitda": 0,
       "growth": 39.1,
@@ -350,7 +350,7 @@
     "metrics": {
       "roe": 6.29,
       "roa": 3.34,
-      "pe": 44.05,
+      "pe": 45.45,
       "pb": 2.18,
       "ev_ebitda": 14.05,
       "growth": 10.5,
@@ -381,7 +381,7 @@
     "metrics": {
       "roe": 13.84,
       "roa": 1.75,
-      "pe": 16.05,
+      "pe": 15.97,
       "pb": 1.86,
       "ev_ebitda": 0,
       "growth": 16.6,
@@ -407,7 +407,7 @@
     "name": "MAX HEALTHCARE INS LTD",
     "sector": "Healthcare",
     "price": 1070.0,
-    "score": 51.94,
+    "score": 51.88,
     "category": "Non-Banking",
     "metrics": {
       "roe": 14.33,
@@ -418,7 +418,7 @@
       "growth": 12.2,
       "margins": 26.02,
       "de": 32.0,
-      "momentum": -15.11
+      "momentum": -15.3
     },
     "rank": 14,
     "percentiles": {
@@ -438,18 +438,18 @@
     "name": "SBI LIFE INSURANCE CO LTD",
     "sector": "Financial Services",
     "price": 1855.5,
-    "score": 43.15,
+    "score": 43.06,
     "category": "Non-Banking",
     "metrics": {
       "roe": 13.7,
       "roa": 0.35,
-      "pe": 71.95,
+      "pe": 71.42,
       "pb": 9.25,
       "ev_ebitda": 62.65,
       "growth": 18.8,
       "margins": 2.42,
       "de": 0,
-      "momentum": 0.57
+      "momentum": 0.24
     },
     "rank": 15,
     "percentiles": {
