@@ -35,18 +35,18 @@
     "name": "AXIS BANK LIMITED",
     "sector": "Financial Services",
     "price": 1245.8,
-    "score": 75.13,
+    "score": 75.19,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 13.35,
       "roa": 1.54,
-      "pe": 14.08,
+      "pe": 14.02,
       "pb": 1.74,
       "ev_ebitda": 0,
       "growth": 14.0,
       "margins": 0.0,
       "de": 0,
-      "momentum": 16.33
+      "momentum": 16.43
     },
     "rank": 2,
     "percentiles": {
@@ -164,7 +164,7 @@
     "metrics": {
       "roe": 16.07,
       "roa": 2.11,
-      "pe": 18.25,
+      "pe": 18.35,
       "pb": 2.68,
       "ev_ebitda": 0,
       "growth": 11.4,
@@ -195,7 +195,7 @@
     "metrics": {
       "roe": 18.5,
       "roa": 0,
-      "pe": 19.92,
+      "pe": 19.96,
       "pb": 3.23,
       "ev_ebitda": 0,
       "growth": 42.8,
@@ -221,18 +221,18 @@
     "name": "HCL TECHNOLOGIES LTD",
     "sector": "Technology",
     "price": 1302.5,
-    "score": 56.14,
+    "score": 55.47,
     "category": "Non-Banking",
     "metrics": {
       "roe": 24.07,
       "roa": 13.31,
-      "pe": 20.53,
+      "pe": 20.29,
       "pb": 4.77,
       "ev_ebitda": 1260.67,
       "growth": 3.0,
       "margins": 18.92,
       "de": 7.0,
-      "momentum": -11.17
+      "momentum": -13.41
     },
     "rank": 8,
     "percentiles": {
@@ -283,18 +283,18 @@
     "name": "DR. REDDY S LABORATORIES",
     "sector": "Healthcare",
     "price": 1174.7,
-    "score": 54.02,
+    "score": 53.89,
     "category": "Non-Banking",
     "metrics": {
       "roe": 8.84,
       "roa": 4.01,
-      "pe": 29.67,
+      "pe": 29.59,
       "pb": 2.55,
       "ev_ebitda": 17.79,
       "growth": -5.6,
       "margins": 16.51,
       "de": 19.0,
-      "momentum": -8.05
+      "momentum": -8.51
     },
     "rank": 10,
     "percentiles": {
@@ -325,7 +325,7 @@
       "growth": 16.6,
       "margins": 0.0,
       "de": 0,
-      "momentum": -26.0
+      "momentum": -25.98
     },
     "rank": 11,
     "percentiles": {
@@ -381,7 +381,7 @@
     "metrics": {
       "roe": 10.83,
       "roa": 0.38,
-      "pe": 59.15,
+      "pe": 60.63,
       "pb": 6.18,
       "ev_ebitda": 49.55,
       "growth": 14.3,
