@@ -102,7 +102,7 @@
     "metrics": {
       "roe": 16.13,
       "roa": 7.26,
-      "pe": 13.97,
+      "pe": 14.01,
       "pb": 2.25,
       "ev_ebitda": 8.95,
       "growth": 10.6,
@@ -151,7 +151,7 @@
       "growth": 76.9,
       "margins": 92.3,
       "de": 15.4,
-      "momentum": 61.5
+      "momentum": 53.8
     }
   },
   {
@@ -176,7 +176,7 @@
     "percentiles": {
       "roe": 46.2,
       "roa": 46.2,
-      "pe": 53.8,
+      "pe": 46.2,
       "pb": 61.5,
       "ev_ebitda": 0.0,
       "growth": 38.5,
@@ -195,7 +195,7 @@
     "metrics": {
       "roe": 18.5,
       "roa": 0,
-      "pe": 18.45,
+      "pe": 18.38,
       "pb": 2.97,
       "ev_ebitda": 0,
       "growth": 42.8,
@@ -207,7 +207,7 @@
     "percentiles": {
       "roe": 61.5,
       "roa": 0.0,
-      "pe": 46.2,
+      "pe": 53.8,
       "pb": 53.8,
       "ev_ebitda": 0.0,
       "growth": 92.3,
@@ -221,18 +221,18 @@
     "name": "HCL TECHNOLOGIES LTD",
     "sector": "Technology",
     "price": 1293.4,
-    "score": 57.7,
+    "score": 57.15,
     "category": "Non-Banking",
     "metrics": {
       "roe": 24.07,
       "roa": 13.31,
-      "pe": 20.53,
+      "pe": 20.12,
       "pb": 4.73,
       "ev_ebitda": 1251.86,
       "growth": 3.0,
       "margins": 18.92,
       "de": 7.0,
-      "momentum": -5.99
+      "momentum": -7.81
     },
     "rank": 8,
     "percentiles": {
@@ -252,7 +252,7 @@
     "name": "DR. REDDY S LABORATORIES",
     "sector": "Healthcare",
     "price": 1151.0,
-    "score": 54.35,
+    "score": 54.26,
     "category": "Non-Banking",
     "metrics": {
       "roe": 8.84,
@@ -263,7 +263,7 @@
       "growth": -5.6,
       "margins": 16.51,
       "de": 19.0,
-      "momentum": -7.64
+      "momentum": -7.96
     },
     "rank": 9,
     "percentiles": {
@@ -319,13 +319,13 @@
     "metrics": {
       "roe": 13.84,
       "roa": 1.75,
-      "pe": 15.46,
+      "pe": 15.58,
       "pb": 1.81,
       "ev_ebitda": 0,
       "growth": 16.6,
       "margins": 0.0,
       "de": 0,
-      "momentum": -26.85
+      "momentum": -26.28
     },
     "rank": 11,
     "percentiles": {
@@ -345,7 +345,7 @@
     "name": "SBI LIFE INSURANCE CO LTD",
     "sector": "Financial Services",
     "price": 1775.0,
-    "score": 42.0,
+    "score": 43.02,
     "category": "Non-Banking",
     "metrics": {
       "roe": 13.7,
@@ -356,7 +356,7 @@
       "growth": 18.8,
       "margins": 2.42,
       "de": 0,
-      "momentum": -3.7
+      "momentum": -0.33
     },
     "rank": 12,
     "percentiles": {
@@ -368,7 +368,7 @@
       "growth": 84.6,
       "margins": 46.2,
       "de": 100.0,
-      "momentum": 53.8
+      "momentum": 61.5
     }
   },
   {
@@ -387,7 +387,7 @@
       "growth": 14.3,
       "margins": 2.34,
       "de": 16.0,
-      "momentum": -29.22
+      "momentum": -27.51
     },
     "rank": 13,
     "percentiles": {
