@@ -62,6 +62,37 @@
     }
   },
   {
+    "ticker": "AXISBANK.NS",
+    "name": "AXIS BANK LIMITED",
+    "sector": "Financial Services",
+    "price": 1222.4,
+    "score": 70.32,
+    "category": "Banking & Finance",
+    "metrics": {
+      "roe": 13.35,
+      "roa": 1.54,
+      "pe": 14.41,
+      "pb": 1.7,
+      "ev_ebitda": 0,
+      "growth": 14.0,
+      "margins": 0.0,
+      "de": 0,
+      "momentum": 7.97
+    },
+    "rank": 3,
+    "percentiles": {
+      "roe": 15.4,
+      "roa": 30.8,
+      "pe": 76.9,
+      "pb": 92.3,
+      "ev_ebitda": 0.0,
+      "growth": 53.8,
+      "margins": 0.0,
+      "de": 100.0,
+      "momentum": 76.9
+    }
+  },
+  {
     "ticker": "WIPRO.NS",
     "name": "WIPRO LTD",
     "sector": "Technology",
@@ -79,7 +110,7 @@
       "de": 27.0,
       "momentum": -31.56
     },
-    "rank": 3,
+    "rank": 4,
     "percentiles": {
       "roe": 53.8,
       "roa": 61.5,
@@ -90,37 +121,6 @@
       "margins": 61.5,
       "de": 23.1,
       "momentum": 0.0
-    }
-  },
-  {
-    "ticker": "AXISBANK.NS",
-    "name": "AXIS BANK LIMITED",
-    "sector": "Financial Services",
-    "price": 1222.4,
-    "score": 68.41,
-    "category": "Banking & Finance",
-    "metrics": {
-      "roe": 13.35,
-      "roa": 1.54,
-      "pe": 14.41,
-      "pb": 1.7,
-      "ev_ebitda": 0,
-      "growth": 14.0,
-      "margins": 0.0,
-      "de": 0,
-      "momentum": 4.8
-    },
-    "rank": 4,
-    "percentiles": {
-      "roe": 15.4,
-      "roa": 30.8,
-      "pe": 76.9,
-      "pb": 92.3,
-      "ev_ebitda": 0.0,
-      "growth": 53.8,
-      "margins": 0.0,
-      "de": 100.0,
-      "momentum": 76.9
     }
   },
   {
@@ -164,7 +164,7 @@
     "metrics": {
       "roe": 16.07,
       "roa": 2.11,
-      "pe": 17.23,
+      "pe": 17.15,
       "pb": 2.5,
       "ev_ebitda": 0,
       "growth": 11.4,
@@ -221,7 +221,7 @@
     "name": "HCL TECHNOLOGIES LTD",
     "sector": "Technology",
     "price": 1258.0,
-    "score": 56.39,
+    "score": 56.7,
     "category": "Non-Banking",
     "metrics": {
       "roe": 24.07,
@@ -232,7 +232,7 @@
       "growth": 3.0,
       "margins": 18.92,
       "de": 7.0,
-      "momentum": -10.36
+      "momentum": -9.33
     },
     "rank": 8,
     "percentiles": {
@@ -252,7 +252,7 @@
     "name": "DR. REDDY S LABORATORIES",
     "sector": "Healthcare",
     "price": 1201.0,
-    "score": 55.38,
+    "score": 55.4,
     "category": "Non-Banking",
     "metrics": {
       "roe": 8.84,
@@ -263,7 +263,7 @@
       "growth": -5.6,
       "margins": 16.51,
       "de": 19.0,
-      "momentum": -2.77
+      "momentum": -2.72
     },
     "rank": 9,
     "percentiles": {
@@ -325,7 +325,7 @@
       "growth": 16.6,
       "margins": 0.0,
       "de": 0,
-      "momentum": -23.3
+      "momentum": -22.59
     },
     "rank": 11,
     "percentiles": {
@@ -381,13 +381,13 @@
     "metrics": {
       "roe": 10.83,
       "roa": 0.38,
-      "pe": 57.47,
+      "pe": 58.16,
       "pb": 5.91,
       "ev_ebitda": 47.43,
       "growth": 14.3,
       "margins": 2.34,
       "de": 16.0,
-      "momentum": -30.36
+      "momentum": -29.82
     },
     "rank": 13,
     "percentiles": {
