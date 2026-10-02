@@ -15,7 +15,7 @@
       "growth": 13.9,
       "margins": 26.12,
       "de": 10.0,
-      "momentum": -29.63
+      "momentum": -28.5
     },
     "rank": 1,
     "percentiles": {
@@ -27,7 +27,7 @@
       "growth": 46.2,
       "margins": 84.6,
       "de": 53.8,
-      "momentum": 23.1
+      "momentum": 15.4
     }
   },
   {
@@ -35,7 +35,7 @@
     "name": "STATE BANK OF INDIA",
     "sector": "Financial Services",
     "price": 954.1,
-    "score": 71.35,
+    "score": 70.73,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 15.18,
@@ -46,7 +46,7 @@
       "growth": 10.3,
       "margins": 0.0,
       "de": 0,
-      "momentum": 11.04
+      "momentum": 10.01
     },
     "rank": 2,
     "percentiles": {
@@ -71,13 +71,13 @@
     "metrics": {
       "roe": 16.13,
       "roa": 7.26,
-      "pe": 12.67,
+      "pe": 12.66,
       "pb": 2.03,
       "ev_ebitda": 7.99,
       "growth": 10.6,
       "margins": 18.41,
       "de": 27.0,
-      "momentum": -34.25
+      "momentum": -33.87
     },
     "rank": 3,
     "percentiles": {
@@ -97,18 +97,18 @@
     "name": "AXIS BANK LIMITED",
     "sector": "Financial Services",
     "price": 1217.1,
-    "score": 69.02,
+    "score": 67.42,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 13.35,
       "roa": 1.54,
-      "pe": 13.7,
+      "pe": 13.79,
       "pb": 1.7,
       "ev_ebitda": 0,
       "growth": 14.0,
       "margins": 0.0,
       "de": 0,
-      "momentum": 5.74
+      "momentum": 3.06
     },
     "rank": 4,
     "percentiles": {
@@ -128,18 +128,18 @@
     "name": "BHARTI AIRTEL LIMITED",
     "sector": "Communication Services",
     "price": 1741.1,
-    "score": 65.47,
+    "score": 64.79,
     "category": "Non-Banking",
     "metrics": {
       "roe": 20.15,
       "roa": 8.16,
-      "pe": 36.41,
+      "pe": 36.36,
       "pb": 6.71,
       "ev_ebitda": 11.05,
       "growth": 18.4,
       "margins": 52.14,
       "de": 100.0,
-      "momentum": -5.92
+      "momentum": -8.2
     },
     "rank": 5,
     "percentiles": {
@@ -159,7 +159,7 @@
     "name": "ICICI BANK LTD.",
     "sector": "Financial Services",
     "price": 1310.6,
-    "score": 62.39,
+    "score": 62.19,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 16.07,
@@ -170,7 +170,7 @@
       "growth": 11.4,
       "margins": 0.0,
       "de": 0,
-      "momentum": -3.67
+      "momentum": -4.0
     },
     "rank": 6,
     "percentiles": {
@@ -182,7 +182,7 @@
       "growth": 38.5,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 61.5
+      "momentum": 53.8
     }
   },
   {
@@ -195,13 +195,13 @@
     "metrics": {
       "roe": 18.5,
       "roa": 0,
-      "pe": 16.7,
+      "pe": 16.69,
       "pb": 2.7,
       "ev_ebitda": 0,
       "growth": 42.8,
       "margins": 0.0,
       "de": 276.0,
-      "momentum": 51.49
+      "momentum": 46.33
     },
     "rank": 7,
     "percentiles": {
@@ -221,18 +221,18 @@
     "name": "HCL TECHNOLOGIES LTD",
     "sector": "Technology",
     "price": 1243.1,
-    "score": 56.05,
+    "score": 56.26,
     "category": "Non-Banking",
     "metrics": {
       "roe": 24.07,
       "roa": 13.31,
-      "pe": 19.36,
+      "pe": 19.34,
       "pb": 4.56,
       "ev_ebitda": 1203.15,
       "growth": 3.0,
       "margins": 18.92,
       "de": 7.0,
-      "momentum": -11.48
+      "momentum": -10.79
     },
     "rank": 8,
     "percentiles": {
@@ -252,18 +252,18 @@
     "name": "DR. REDDY S LABORATORIES",
     "sector": "Healthcare",
     "price": 1206.2,
-    "score": 55.89,
+    "score": 55.16,
     "category": "Non-Banking",
     "metrics": {
       "roe": 8.84,
       "roa": 4.01,
-      "pe": 30.38,
+      "pe": 30.4,
       "pb": 2.62,
       "ev_ebitda": 18.27,
       "growth": -5.6,
       "margins": 16.51,
       "de": 19.0,
-      "momentum": -0.94
+      "momentum": -3.36
     },
     "rank": 9,
     "percentiles": {
@@ -288,13 +288,13 @@
     "metrics": {
       "roe": 32.0,
       "roa": 15.3,
-      "pe": 13.31,
+      "pe": 13.3,
       "pb": 4.54,
       "ev_ebitda": 934.68,
       "growth": 2.9,
       "margins": 22.08,
       "de": 10.0,
-      "momentum": -31.24
+      "momentum": -28.45
     },
     "rank": 10,
     "percentiles": {
@@ -306,7 +306,7 @@
       "growth": 7.7,
       "margins": 76.9,
       "de": 53.8,
-      "momentum": 15.4
+      "momentum": 23.1
     }
   },
   {
@@ -319,13 +319,13 @@
     "metrics": {
       "roe": 13.84,
       "roa": 1.75,
-      "pe": 15.75,
+      "pe": 15.77,
       "pb": 1.83,
       "ev_ebitda": 0,
       "growth": 16.6,
       "margins": 0.0,
       "de": 0,
-      "momentum": -26.58
+      "momentum": -25.28
     },
     "rank": 11,
     "percentiles": {
@@ -345,18 +345,18 @@
     "name": "SBI LIFE INSURANCE CO LTD",
     "sector": "Financial Services",
     "price": 1721.6,
-    "score": 41.47,
+    "score": 42.14,
     "category": "Non-Banking",
     "metrics": {
       "roe": 13.7,
       "roa": 0.35,
-      "pe": 66.34,
+      "pe": 66.68,
       "pb": 8.58,
       "ev_ebitda": 58.09,
       "growth": 18.8,
       "margins": 2.42,
       "de": 0,
-      "momentum": -5.81
+      "momentum": -3.56
     },
     "rank": 12,
     "percentiles": {
@@ -368,7 +368,7 @@
       "growth": 84.6,
       "margins": 46.2,
       "de": 100.0,
-      "momentum": 53.8
+      "momentum": 61.5
     }
   },
   {
@@ -381,13 +381,13 @@
     "metrics": {
       "roe": 10.83,
       "roa": 0.38,
-      "pe": 58.0,
+      "pe": 56.83,
       "pb": 5.95,
       "ev_ebitda": 47.71,
       "growth": 14.3,
       "margins": 2.34,
       "de": 16.0,
-      "momentum": -31.47
+      "momentum": -29.64
     },
     "rank": 13,
     "percentiles": {
