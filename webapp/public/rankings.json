@@ -24,7 +24,7 @@
       "pe": 40.0,
       "pb": 40.0,
       "ev_ebitda": 53.3,
-      "growth": 53.3,
+      "growth": 46.7,
       "margins": 46.7,
       "de": 66.7,
       "momentum": 86.7
@@ -117,7 +117,7 @@
       "pe": 86.7,
       "pb": 93.3,
       "ev_ebitda": 0.0,
-      "growth": 46.7,
+      "growth": 40.0,
       "margins": 0.0,
       "de": 100.0,
       "momentum": 73.3
@@ -155,37 +155,6 @@
     }
   },
   {
-    "ticker": "ICICIBANK.NS",
-    "name": "ICICI BANK LTD.",
-    "sector": "Financial Services",
-    "price": 1397.0,
-    "score": 64.41,
-    "category": "Banking & Finance",
-    "metrics": {
-      "roe": 16.07,
-      "roa": 2.11,
-      "pe": 18.06,
-      "pb": 2.63,
-      "ev_ebitda": 0,
-      "growth": 11.4,
-      "margins": 0.0,
-      "de": 0,
-      "momentum": 0.48
-    },
-    "rank": 6,
-    "percentiles": {
-      "roe": 46.7,
-      "roa": 40.0,
-      "pe": 53.3,
-      "pb": 73.3,
-      "ev_ebitda": 0.0,
-      "growth": 40.0,
-      "margins": 0.0,
-      "de": 100.0,
-      "momentum": 66.7
-    }
-  },
-  {
     "ticker": "NESTLEIND.NS",
     "name": "NESTLE INDIA LIMITED",
     "sector": "Consumer Defensive",
@@ -203,7 +172,7 @@
       "de": 8.0,
       "momentum": -1.55
     },
-    "rank": 7,
+    "rank": 6,
     "percentiles": {
       "roe": 93.3,
       "roa": 93.3,
@@ -214,6 +183,37 @@
       "margins": 80.0,
       "de": 60.0,
       "momentum": 60.0
+    }
+  },
+  {
+    "ticker": "ICICIBANK.NS",
+    "name": "ICICI BANK LTD.",
+    "sector": "Financial Services",
+    "price": 1397.0,
+    "score": 64.09,
+    "category": "Banking & Finance",
+    "metrics": {
+      "roe": 16.49,
+      "roa": 2.1,
+      "pe": 18.06,
+      "pb": 2.76,
+      "ev_ebitda": 0,
+      "growth": 15.8,
+      "margins": 0.0,
+      "de": 0,
+      "momentum": 0.48
+    },
+    "rank": 7,
+    "percentiles": {
+      "roe": 46.7,
+      "roa": 40.0,
+      "pe": 53.3,
+      "pb": 60.0,
+      "ev_ebitda": 0.0,
+      "growth": 53.3,
+      "margins": 0.0,
+      "de": 100.0,
+      "momentum": 66.7
     }
   },
   {
@@ -270,7 +270,7 @@
       "roe": 53.3,
       "roa": 0.0,
       "pe": 66.7,
-      "pb": 66.7,
+      "pb": 73.3,
       "ev_ebitda": 0.0,
       "growth": 93.3,
       "margins": 0.0,
@@ -289,7 +289,7 @@
       "roe": 24.65,
       "roa": 13.13,
       "pe": 20.42,
-      "pb": 4.98,
+      "pb": 4.95,
       "ev_ebitda": 1333.34,
       "growth": 2.2,
       "margins": 18.86,
@@ -332,7 +332,7 @@
       "roe": 0.0,
       "roa": 46.7,
       "pe": 33.3,
-      "pb": 66.7,
+      "pb": 73.3,
       "ev_ebitda": 60.0,
       "growth": 0.0,
       "margins": 53.3,
@@ -351,7 +351,7 @@
       "roe": 32.0,
       "roa": 15.3,
       "pe": 15.82,
-      "pb": 5.17,
+      "pb": 5.15,
       "ev_ebitda": 1048.71,
       "growth": 2.9,
       "margins": 22.08,
@@ -376,13 +376,13 @@
     "name": "HDFC BANK LTD",
     "sector": "Financial Services",
     "price": 728.85,
-    "score": 53.39,
+    "score": 53.05,
     "category": "Banking & Finance",
     "metrics": {
       "roe": 13.84,
       "roa": 1.75,
       "pe": 15.93,
-      "pb": 1.85,
+      "pb": 1.91,
       "ev_ebitda": 0,
       "growth": 16.6,
       "margins": 0.0,
