@@ -12,53 +12,22 @@
       "pe": 14.42,
       "pb": 1.83,
       "ev_ebitda": 0,
-      "growth": 79.9,
+      "growth": 37.9,
       "margins": 0.0,
       "de": 146.0,
       "momentum": 20.21
     },
     "rank": 1,
     "percentiles": {
-      "roe": 31.6,
-      "roa": 42.1,
-      "pe": 78.9,
-      "pb": 78.9,
+      "roe": 35.0,
+      "roa": 45.0,
+      "pe": 80.0,
+      "pb": 80.0,
       "ev_ebitda": 0.0,
-      "growth": 89.5,
+      "growth": 85.0,
       "margins": 0.0,
-      "de": 10.5,
-      "momentum": 89.5
-    }
-  },
-  {
-    "ticker": "JSWSTEEL.NS",
-    "name": "JSW STEEL LIMITED",
-    "sector": "Basic Materials",
-    "price": 1185.5,
-    "score": 74.91,
-    "category": "Non-Banking",
-    "metrics": {
-      "roe": 31.93,
-      "roa": 7.32,
-      "pe": 11.72,
-      "pb": 2.89,
-      "ev_ebitda": 8.95,
-      "growth": 21.6,
-      "margins": 18.92,
-      "de": 62.0,
-      "momentum": 3.03
-    },
-    "rank": 2,
-    "percentiles": {
-      "roe": 84.2,
-      "roa": 63.2,
-      "pe": 89.5,
-      "pb": 57.9,
-      "ev_ebitda": 36.8,
-      "growth": 73.7,
-      "margins": 73.7,
-      "de": 26.3,
-      "momentum": 78.9
+      "de": 10.0,
+      "momentum": 90.0
     }
   },
   {
@@ -79,17 +48,48 @@
       "de": 7.0,
       "momentum": 22.37
     },
+    "rank": 2,
+    "percentiles": {
+      "roe": 65.0,
+      "roa": 75.0,
+      "pe": 35.0,
+      "pb": 30.0,
+      "ev_ebitda": 60.0,
+      "growth": 30.0,
+      "margins": 55.0,
+      "de": 70.0,
+      "momentum": 95.0
+    }
+  },
+  {
+    "ticker": "JSWSTEEL.NS",
+    "name": "JSW STEEL LIMITED",
+    "sector": "Basic Materials",
+    "price": 1185.5,
+    "score": 74.55,
+    "category": "Non-Banking",
+    "metrics": {
+      "roe": 31.93,
+      "roa": 7.18,
+      "pe": 10.19,
+      "pb": 2.55,
+      "ev_ebitda": 9.03,
+      "growth": 20.7,
+      "margins": 18.7,
+      "de": 62.0,
+      "momentum": 3.03
+    },
     "rank": 3,
     "percentiles": {
-      "roe": 63.2,
-      "roa": 73.7,
-      "pe": 36.8,
-      "pb": 31.6,
-      "ev_ebitda": 57.9,
-      "growth": 31.6,
-      "margins": 52.6,
-      "de": 73.7,
-      "momentum": 94.7
+      "roe": 85.0,
+      "roa": 60.0,
+      "pe": 95.0,
+      "pb": 65.0,
+      "ev_ebitda": 40.0,
+      "growth": 65.0,
+      "margins": 65.0,
+      "de": 25.0,
+      "momentum": 80.0
     }
   },
   {
@@ -112,15 +112,15 @@
     },
     "rank": 4,
     "percentiles": {
-      "roe": 89.5,
-      "roa": 89.5,
-      "pe": 52.6,
-      "pb": 15.8,
-      "ev_ebitda": 52.6,
-      "growth": 26.3,
-      "margins": 89.5,
-      "de": 52.6,
-      "momentum": 21.1
+      "roe": 90.0,
+      "roa": 90.0,
+      "pe": 55.0,
+      "pb": 15.0,
+      "ev_ebitda": 55.0,
+      "growth": 25.0,
+      "margins": 90.0,
+      "de": 50.0,
+      "momentum": 20.0
     }
   },
   {
@@ -143,15 +143,15 @@
     },
     "rank": 5,
     "percentiles": {
-      "roe": 36.8,
-      "roa": 10.5,
-      "pe": 94.7,
-      "pb": 94.7,
+      "roe": 40.0,
+      "roa": 10.0,
+      "pe": 90.0,
+      "pb": 95.0,
       "ev_ebitda": 0.0,
-      "growth": 21.1,
+      "growth": 20.0,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 84.2
+      "momentum": 85.0
     }
   },
   {
@@ -174,15 +174,15 @@
     },
     "rank": 6,
     "percentiles": {
-      "roe": 42.1,
-      "roa": 57.9,
-      "pe": 73.7,
-      "pb": 73.7,
-      "ev_ebitda": 42.1,
-      "growth": 15.8,
-      "margins": 57.9,
-      "de": 36.8,
-      "momentum": 15.8
+      "roe": 45.0,
+      "roa": 65.0,
+      "pe": 75.0,
+      "pb": 70.0,
+      "ev_ebitda": 45.0,
+      "growth": 15.0,
+      "margins": 60.0,
+      "de": 35.0,
+      "momentum": 15.0
     }
   },
   {
@@ -195,7 +195,7 @@
     "metrics": {
       "roe": 16.49,
       "roa": 2.1,
-      "pe": 16.96,
+      "pe": 17.12,
       "pb": 2.56,
       "ev_ebitda": 0,
       "growth": 15.8,
@@ -205,15 +205,15 @@
     },
     "rank": 7,
     "percentiles": {
-      "roe": 52.6,
-      "roa": 26.3,
-      "pe": 57.9,
-      "pb": 68.4,
+      "roe": 55.0,
+      "roa": 25.0,
+      "pe": 60.0,
+      "pb": 60.0,
       "ev_ebitda": 0.0,
-      "growth": 36.8,
+      "growth": 35.0,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 73.7
+      "momentum": 75.0
     }
   },
   {
@@ -236,15 +236,15 @@
     },
     "rank": 8,
     "percentiles": {
-      "roe": 26.3,
-      "roa": 15.8,
-      "pe": 84.2,
-      "pb": 89.5,
+      "roe": 30.0,
+      "roa": 15.0,
+      "pe": 85.0,
+      "pb": 90.0,
       "ev_ebitda": 0.0,
-      "growth": 68.4,
+      "growth": 75.0,
       "margins": 0.0,
       "de": 100.0,
-      "momentum": 68.4
+      "momentum": 65.0
     }
   },
   {
@@ -267,15 +267,15 @@
     },
     "rank": 9,
     "percentiles": {
-      "roe": 68.4,
-      "roa": 68.4,
-      "pe": 21.1,
-      "pb": 21.1,
-      "ev_ebitda": 47.4,
-      "growth": 42.1,
-      "margins": 94.7,
-      "de": 15.8,
-      "momentum": 42.1
+      "roe": 70.0,
+      "roa": 70.0,
+      "pe": 20.0,
+      "pb": 20.0,
+      "ev_ebitda": 50.0,
+      "growth": 40.0,
+      "margins": 95.0,
+      "de": 15.0,
+      "momentum": 40.0
     }
   },
   {
@@ -298,15 +298,15 @@
     },
     "rank": 10,
     "percentiles": {
-      "roe": 94.7,
-      "roa": 94.7,
-      "pe": 10.5,
-      "pb": 5.3,
-      "ev_ebitda": 73.7,
-      "growth": 63.2,
-      "margins": 84.2,
-      "de": 68.4,
-      "momentum": 47.4
+      "roe": 95.0,
+      "roa": 95.0,
+      "pe": 10.0,
+      "pb": 5.0,
+      "ev_ebitda": 75.0,
+      "growth": 60.0,
+      "margins": 85.0,
+      "de": 65.0,
+      "momentum": 45.0
     }
   },
   {
@@ -314,30 +314,61 @@
     "name": "BHARAT PETROLEUM CORP  LT",
     "sector": "Energy",
     "price": 281.95,
-    "score": 61.25,
+    "score": 61.23,
     "category": "Non-Banking",
     "metrics": {
       "roe": 16.17,
-      "roa": 5.25,
+      "roa": 5.28,
       "pe": 7.62,
       "pb": 1.19,
-      "ev_ebitda": 6.41,
-      "growth": 50.7,
-      "margins": 5.2,
+      "ev_ebitda": 6.38,
+      "growth": 42.1,
+      "margins": 5.06,
       "de": 62.0,
       "momentum": -17.8
     },
     "rank": 11,
     "percentiles": {
-      "roe": 47.4,
-      "roa": 47.4,
+      "roe": 50.0,
+      "roa": 50.0,
       "pe": 100.0,
       "pb": 100.0,
-      "ev_ebitda": 31.6,
-      "growth": 84.2,
-      "margins": 42.1,
-      "de": 26.3,
-      "momentum": 26.3
+      "ev_ebitda": 35.0,
+      "growth": 90.0,
+      "margins": 45.0,
+      "de": 25.0,
+      "momentum": 25.0
+    }
+  },
+  {
+    "ticker": "KOTAKBANK.NS",
+    "name": "KOTAK MAHINDRA BANK LTD",
+    "sector": "Financial Services",
+    "price": 430.5,
+    "score": 60.9,
+    "category": "Banking & Finance",
+    "metrics": {
+      "roe": 11.83,
+      "roa": 2.11,
+      "pe": 21.1,
+      "pb": 2.2,
+      "ev_ebitda": 0,
+      "growth": 20.7,
+      "margins": 0.0,
+      "de": 0,
+      "momentum": 0.18
+    },
+    "rank": 12,
+    "percentiles": {
+      "roe": 20.0,
+      "roa": 30.0,
+      "pe": 45.0,
+      "pb": 75.0,
+      "ev_ebitda": 0.0,
+      "growth": 65.0,
+      "margins": 0.0,
+      "de": 100.0,
+      "momentum": 70.0
     }
   },
   {
@@ -358,17 +389,17 @@
       "de": 8.0,
       "momentum": -7.26
     },
-    "rank": 12,
+    "rank": 13,
     "percentiles": {
-      "roe": 73.7,
-      "roa": 78.9,
-      "pe": 47.4,
-      "pb": 36.8,
-      "ev_ebitda": 94.7,
-      "growth": 10.5,
-      "margins": 68.4,
-      "de": 68.4,
-      "momentum": 57.9
+      "roe": 75.0,
+      "roa": 80.0,
+      "pe": 50.0,
+      "pb": 35.0,
+      "ev_ebitda": 95.0,
+      "growth": 10.0,
+      "margins": 75.0,
+      "de": 65.0,
+      "momentum": 55.0
     }
   },
   {
@@ -389,17 +420,17 @@
       "de": 38.0,
       "momentum": -8.03
     },
-    "rank": 13,
+    "rank": 14,
     "percentiles": {
-      "roe": 15.8,
-      "roa": 52.6,
-      "pe": 26.3,
-      "pb": 52.6,
-      "ev_ebitda": 63.2,
-      "growth": 52.6,
-      "margins": 63.2,
-      "de": 31.6,
-      "momentum": 52.6
+      "roe": 15.0,
+      "roa": 55.0,
+      "pe": 25.0,
+      "pb": 50.0,
+      "ev_ebitda": 65.0,
+      "growth": 50.0,
+      "margins": 70.0,
+      "de": 30.0,
+      "momentum": 50.0
     }
   },
   {
@@ -411,26 +442,26 @@
     "category": "Non-Banking",
     "metrics": {
       "roe": 29.95,
-      "roa": 14.76,
+      "roa": 14.77,
       "pe": 15.36,
       "pb": 4.8,
-      "ev_ebitda": 1014.84,
+      "ev_ebitda": 1035.08,
       "growth": 1.4,
-      "margins": 22.59,
+      "margins": 22.15,
       "de": 9.0,
       "momentum": -23.31
     },
-    "rank": 14,
+    "rank": 15,
     "percentiles": {
-      "roe": 78.9,
-      "roa": 84.2,
-      "pe": 63.2,
-      "pb": 42.1,
-      "ev_ebitda": 89.5,
-      "growth": 5.3,
-      "margins": 78.9,
-      "de": 57.9,
-      "momentum": 10.5
+      "roe": 80.0,
+      "roa": 85.0,
+      "pe": 65.0,
+      "pb": 40.0,
+      "ev_ebitda": 90.0,
+      "growth": 5.0,
+      "margins": 80.0,
+      "de": 55.0,
+      "momentum": 10.0
     }
   },
   {
@@ -451,17 +482,17 @@
       "de": 342.0,
       "momentum": -14.34
     },
-    "rank": 15,
+    "rank": 16,
     "percentiles": {
-      "roe": 57.9,
-      "roa": 36.8,
-      "pe": 42.1,
-      "pb": 47.4,
+      "roe": 60.0,
+      "roa": 40.0,
+      "pe": 40.0,
+      "pb": 45.0,
       "ev_ebitda": 0.0,
-      "growth": 78.9,
+      "growth": 80.0,
       "margins": 0.0,
-      "de": 5.3,
-      "momentum": 31.6
+      "de": 5.0,
+      "momentum": 30.0
     }
   },
   {
@@ -469,30 +500,30 @@
     "name": "DR. REDDY S LABORATORIES",
     "sector": "Healthcare",
     "price": 1229.5,
-    "score": 51.32,
+    "score": 51.25,
     "category": "Non-Banking",
     "metrics": {
       "roe": 7.34,
-      "roa": 3.38,
+      "roa": 3.37,
       "pe": 36.6,
       "pb": 2.65,
-      "ev_ebitda": 20.49,
+      "ev_ebitda": 20.55,
       "growth": -1.5,
-      "margins": 15.14,
+      "margins": 15.1,
       "de": 19.0,
       "momentum": -4.27
     },
-    "rank": 16,
+    "rank": 17,
     "percentiles": {
       "roe": 0.0,
-      "roa": 31.6,
-      "pe": 31.6,
-      "pb": 63.2,
-      "ev_ebitda": 68.4,
+      "roa": 35.0,
+      "pe": 30.0,
+      "pb": 55.0,
+      "ev_ebitda": 70.0,
       "growth": 0.0,
-      "margins": 47.4,
-      "de": 42.1,
-      "momentum": 63.2
+      "margins": 50.0,
+      "de": 40.0,
+      "momentum": 60.0
     }
   },
   {
@@ -513,14 +544,14 @@
       "de": 0,
       "momentum": -30.92
     },
-    "rank": 17,
+    "rank": 18,
     "percentiles": {
-      "roe": 5.3,
-      "roa": 21.1,
-      "pe": 68.4,
-      "pb": 84.2,
+      "roe": 5.0,
+      "roa": 20.0,
+      "pe": 70.0,
+      "pb": 85.0,
       "ev_ebitda": 0.0,
-      "growth": 94.7,
+      "growth": 95.0,
       "margins": 0.0,
       "de": 100.0,
       "momentum": 0.0
@@ -544,17 +575,17 @@
       "de": 0,
       "momentum": -13.82
     },
-    "rank": 18,
+    "rank": 19,
     "percentiles": {
-      "roe": 21.1,
+      "roe": 25.0,
       "roa": 0.0,
-      "pe": 5.3,
-      "pb": 10.5,
-      "ev_ebitda": 84.2,
-      "growth": 52.6,
-      "margins": 36.8,
+      "pe": 5.0,
+      "pb": 10.0,
+      "ev_ebitda": 85.0,
+      "growth": 50.0,
+      "margins": 40.0,
       "de": 100.0,
-      "momentum": 36.8
+      "momentum": 35.0
     }
   },
   {
@@ -575,17 +606,17 @@
       "de": 16.0,
       "momentum": -28.96
     },
-    "rank": 19,
+    "rank": 20,
     "percentiles": {
-      "roe": 10.5,
-      "roa": 5.3,
-      "pe": 15.8,
-      "pb": 26.3,
-      "ev_ebitda": 78.9,
-      "growth": 47.4,
-      "margins": 31.6,
-      "de": 47.4,
-      "momentum": 5.3
+      "roe": 10.0,
+      "roa": 5.0,
+      "pe": 15.0,
+      "pb": 25.0,
+      "ev_ebitda": 80.0,
+      "growth": 45.0,
+      "margins": 35.0,
+      "de": 45.0,
+      "momentum": 5.0
     }
   }
 ]
