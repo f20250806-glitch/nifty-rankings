@@ -71,7 +71,7 @@
     "metrics": {
       "roe": 31.93,
       "roa": 7.18,
-      "pe": 11.59,
+      "pe": 11.63,
       "pb": 2.9,
       "ev_ebitda": 10.1,
       "growth": 20.7,
@@ -86,7 +86,7 @@
       "pe": 87.8,
       "pb": 69.4,
       "ev_ebitda": 30.6,
-      "growth": 53.1,
+      "growth": 55.1,
       "margins": 59.2,
       "de": 38.8,
       "momentum": 81.6
@@ -179,7 +179,7 @@
       "pe": 100.0,
       "pb": 100.0,
       "ev_ebitda": 14.3,
-      "growth": 67.3,
+      "growth": 69.4,
       "margins": 36.7,
       "de": 44.9,
       "momentum": 38.8
@@ -283,15 +283,15 @@
     "name": "EICHER MOTORS LTD",
     "sector": "Consumer Cyclical",
     "price": 7650.0,
-    "score": 69.84,
+    "score": 69.99,
     "category": "Non-Banking",
     "metrics": {
       "roe": 24.89,
       "roa": 10.52,
       "pe": 35.18,
       "pb": 8.1,
-      "ev_ebitda": 34.07,
-      "growth": 25.6,
+      "ev_ebitda": 33.1,
+      "growth": 20.3,
       "margins": 23.26,
       "de": 2.0,
       "momentum": 12.52
@@ -302,8 +302,8 @@
       "roa": 73.5,
       "pe": 40.8,
       "pb": 28.6,
-      "ev_ebitda": 77.6,
-      "growth": 67.3,
+      "ev_ebitda": 75.5,
+      "growth": 49.0,
       "margins": 71.4,
       "de": 81.6,
       "momentum": 77.6
@@ -365,7 +365,7 @@
       "pe": 85.7,
       "pb": 89.8,
       "ev_ebitda": 0.0,
-      "growth": 59.2,
+      "growth": 61.2,
       "margins": 0.0,
       "de": 100.0,
       "momentum": 61.2
@@ -396,7 +396,7 @@
       "pe": 59.2,
       "pb": 71.4,
       "ev_ebitda": 0.0,
-      "growth": 53.1,
+      "growth": 55.1,
       "margins": 0.0,
       "de": 100.0,
       "momentum": 85.7
@@ -458,7 +458,7 @@
       "pe": 46.9,
       "pb": 53.1,
       "ev_ebitda": 55.1,
-      "growth": 65.3,
+      "growth": 67.3,
       "margins": 95.9,
       "de": 34.7,
       "momentum": 98.0
@@ -581,7 +581,7 @@
       "roa": 77.6,
       "pe": 22.4,
       "pb": 16.3,
-      "ev_ebitda": 75.5,
+      "ev_ebitda": 77.6,
       "growth": 79.6,
       "margins": 85.7,
       "de": 100.0,
@@ -641,7 +641,7 @@
     "percentiles": {
       "roe": 32.7,
       "roa": 65.3,
-      "pe": 32.7,
+      "pe": 34.7,
       "pb": 40.8,
       "ev_ebitda": 63.3,
       "growth": 24.5,
@@ -675,7 +675,7 @@
       "pe": 93.9,
       "pb": 93.9,
       "ev_ebitda": 24.5,
-      "growth": 61.2,
+      "growth": 63.3,
       "margins": 89.8,
       "de": 18.4,
       "momentum": 49.0
@@ -830,7 +830,7 @@
       "pe": 69.4,
       "pb": 55.1,
       "ev_ebitda": 32.7,
-      "growth": 67.3,
+      "growth": 69.4,
       "margins": 57.1,
       "de": 16.3,
       "momentum": 30.6
@@ -892,7 +892,7 @@
       "pe": 18.4,
       "pb": 12.2,
       "ev_ebitda": 73.5,
-      "growth": 57.1,
+      "growth": 59.2,
       "margins": 34.7,
       "de": 30.6,
       "momentum": 79.6
@@ -908,7 +908,7 @@
     "metrics": {
       "roe": 11.5,
       "roa": 5.95,
-      "pe": 40.46,
+      "pe": 41.26,
       "pb": 4.84,
       "ev_ebitda": 21.42,
       "growth": 18.8,
@@ -920,7 +920,7 @@
     "percentiles": {
       "roe": 18.4,
       "roa": 49.0,
-      "pe": 36.7,
+      "pe": 32.7,
       "pb": 46.9,
       "ev_ebitda": 57.1,
       "growth": 46.9,
@@ -1013,7 +1013,7 @@
     "percentiles": {
       "roe": 6.1,
       "roa": 18.4,
-      "pe": 34.7,
+      "pe": 36.7,
       "pb": 65.3,
       "ev_ebitda": 61.2,
       "growth": 0.0,
@@ -1182,16 +1182,16 @@
     "name": "GRASIM INDUSTRIES LTD",
     "sector": "Basic Materials",
     "price": 3034.0,
-    "score": 51.44,
+    "score": 51.46,
     "category": "Non-Banking",
     "metrics": {
       "roe": 6.38,
-      "roa": 3.55,
+      "roa": 3.56,
       "pe": 41.99,
       "pb": 1.92,
-      "ev_ebitda": 12.7,
-      "growth": 26.4,
-      "margins": 20.49,
+      "ev_ebitda": 12.69,
+      "growth": 25.6,
+      "margins": 20.51,
       "de": 144.0,
       "momentum": 8.73
     },
@@ -1202,7 +1202,7 @@
       "pe": 28.6,
       "pb": 87.8,
       "ev_ebitda": 42.9,
-      "growth": 77.6,
+      "growth": 69.4,
       "margins": 65.3,
       "de": 14.3,
       "momentum": 67.3
@@ -1249,7 +1249,7 @@
     "metrics": {
       "roe": 27.06,
       "roa": 14.19,
-      "pe": 89.04,
+      "pe": 88.61,
       "pb": 21.72,
       "ev_ebitda": 51.48,
       "growth": 21.9,
@@ -1264,7 +1264,7 @@
       "pe": 2.0,
       "pb": 10.2,
       "ev_ebitda": 89.8,
-      "growth": 63.3,
+      "growth": 65.3,
       "margins": 40.8,
       "de": 51.0,
       "momentum": 2.0
@@ -1295,7 +1295,7 @@
       "pe": 49.0,
       "pb": 59.2,
       "ev_ebitda": 53.1,
-      "growth": 75.5,
+      "growth": 77.6,
       "margins": 22.4,
       "de": 100.0,
       "momentum": 16.3
@@ -1512,7 +1512,7 @@
       "pe": 55.1,
       "pb": 2.0,
       "ev_ebitda": 67.3,
-      "growth": 73.5,
+      "growth": 75.5,
       "margins": 20.4,
       "de": 2.0,
       "momentum": 46.9
